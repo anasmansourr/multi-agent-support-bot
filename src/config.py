@@ -67,3 +67,8 @@ OLLAMA_TIMEOUT_SECONDS = 120                  # local CPU inference is slower th
 
 # ---- Tools (Phase 10) -----------------------------------------------------------
 FEATURE_REQUESTS_PATH = DATA_DIR / "feature_requests.jsonl"   # written by log_feature_request at runtime
+
+# ---- Agents (Phase 11) ---------------------------------------------------------
+PRODUCT_NAME = "FlowDesk"                 # fictional project-management SaaS used for the demo
+DEFAULT_CUSTOMER_ID = "demo_customer"     # the "signed-in" customer in the demo (mock data)
+AGENT_MAX_ITERATIONS = 5                  # safety cap on tool-calling loops
