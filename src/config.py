@@ -64,3 +64,6 @@ LLM_MAX_RETRIES = 1           # keep low: on a rate limit we want to fail over f
 OLLAMA_DEFAULT_MODEL = "llama3.2:3b"          # ~2 GB download, runs on an ordinary laptop
 OLLAMA_DEFAULT_BASE_URL = "http://localhost:11434"
 OLLAMA_TIMEOUT_SECONDS = 120                  # local CPU inference is slower than Groq
+
+# ---- Tools (Phase 10) -----------------------------------------------------------
+FEATURE_REQUESTS_PATH = DATA_DIR / "feature_requests.jsonl"   # written by log_feature_request at runtime

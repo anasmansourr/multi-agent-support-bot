@@ -225,3 +225,4 @@ data/raw/*
 
 # Experiment checkpoints
 models/wd*.pt
+data/feature_requests.jsonl
