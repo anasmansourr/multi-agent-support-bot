@@ -50,3 +50,11 @@ GRAD_CLIP = 5.0
 HISTORY_PATH = MODELS_DIR / "training_history.json"
 CURVES_PATH = MODELS_DIR / "training_curves.png"
 WORD_DROPOUT = 0.3          # share of words randomly replaced by <unk> while training; chosen on VALIDATION (0.0 -> 79.5%, 0.15 -> 86.1%, 0.3 -> 88.9%)
+
+# ---- LLM settings (Phase 8) -----------------------------------------------------
+# Default Groq model. Override without touching code: put GROQ_MODEL=<model id> in .env.
+# Verify what your key can use with:  python -m src.llm.providers --list
+GROQ_DEFAULT_MODEL = "openai/gpt-oss-20b"
+LLM_TEMPERATURE = 0.0         # 0 = most deterministic; good for tool-calling agents
+LLM_TIMEOUT_SECONDS = 30
+LLM_MAX_RETRIES = 1           # keep low: on a rate limit we want to fail over fast, not wait
