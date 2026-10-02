@@ -29,7 +29,6 @@ BIDIRECTIONAL = True
 
 # ---- Training ---------------------------------------------------------------
 LEARNING_RATE = 1e-3
-EPOCHS = 10
 BATCH_SIZE = 64
 SEED = 42
 
@@ -43,3 +42,10 @@ REAL_CAP_PER_INTENT = 300     # max REAL rows kept per intent (keeps synthetic S
 VAL_FRAC = 0.15
 TEST_FRAC = 0.15
 MIN_FREQ = 2                  # a word must appear >= 2 times in TRAIN to get its own id
+
+# ---- Phase 5 training extras ---------------------------------------------------
+EPOCHS = 15                   # upper bound; early stopping usually ends sooner
+PATIENCE = 5                  # stop if val macro-F1 has not improved for this many epochs
+GRAD_CLIP = 5.0
+HISTORY_PATH = MODELS_DIR / "training_history.json"
+CURVES_PATH = MODELS_DIR / "training_curves.png"
