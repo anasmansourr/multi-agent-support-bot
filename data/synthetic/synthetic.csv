@@ -1,0 +1,1145 @@
+text,label,source,original_label,group
+i was charged twice for my subscription this month,billing,synthetic,hand_written,billing_0
+"excuse me, i was charged twice for my subscription this month",billing,synthetic,hand_written,billing_0
+i was charged twice for my subscription this month please,billing,synthetic,hand_written,billing_0
+"hi, i was charged twice for my subscription this month any idea",billing,synthetic,hand_written,billing_0
+why did my invoice go up compared to last month,billing,synthetic,hand_written,billing_1
+"hey, why did my invoice go up compared to last month",billing,synthetic,hand_written,billing_1
+why did my invoice go up compared to last month thanks,billing,synthetic,hand_written,billing_1
+"hello, why did my invoice go up compared to last month thanks",billing,synthetic,hand_written,billing_1
+i need a copy of my latest invoice,billing,synthetic,hand_written,billing_2
+"excuse me, i need a copy of my latest invoice",billing,synthetic,hand_written,billing_2
+i need a copy of my latest invoice please,billing,synthetic,hand_written,billing_2
+"excuse me, i need a copy of my latest invoice any idea",billing,synthetic,hand_written,billing_2
+how do i update the credit card on my account,billing,synthetic,hand_written,billing_3
+"please help, how do i update the credit card on my account",billing,synthetic,hand_written,billing_3
+how do i update the credit card on my account please,billing,synthetic,hand_written,billing_3
+"please help, how do i update the credit card on my account can you help",billing,synthetic,hand_written,billing_3
+my payment was declined but my card is fine,billing,synthetic,hand_written,billing_4
+"hi, my payment was declined but my card is fine",billing,synthetic,hand_written,billing_4
+my payment was declined but my card is fine please,billing,synthetic,hand_written,billing_4
+"hi, my payment was declined but my card is fine thanks",billing,synthetic,hand_written,billing_4
+can i get a refund for the annual plan i just bought,billing,synthetic,hand_written,billing_5
+"hello, can i get a refund for the annual plan i just bought",billing,synthetic,hand_written,billing_5
+can i get a refund for the annual plan i just bought thank you,billing,synthetic,hand_written,billing_5
+"please help, can i get a refund for the annual plan i just bought please",billing,synthetic,hand_written,billing_5
+please cancel my subscription so i am not billed again,billing,synthetic,hand_written,billing_6
+"please help, please cancel my subscription so i am not billed again",billing,synthetic,hand_written,billing_6
+please cancel my subscription so i am not billed again thanks,billing,synthetic,hand_written,billing_6
+"excuse me, please cancel my subscription so i am not billed again any idea",billing,synthetic,hand_written,billing_6
+what is the price of the business plan per user,billing,synthetic,hand_written,billing_7
+"excuse me, what is the price of the business plan per user",billing,synthetic,hand_written,billing_7
+what is the price of the business plan per user thank you,billing,synthetic,hand_written,billing_7
+quick question: what is the price of the business plan per user thanks,billing,synthetic,hand_written,billing_7
+there is a charge on my statement that i do not recognise,billing,synthetic,hand_written,billing_8
+quick question: there is a charge on my statement that i do not recognise,billing,synthetic,hand_written,billing_8
+there is a charge on my statement that i do not recognise thank you,billing,synthetic,hand_written,billing_8
+"hey, there is a charge on my statement that i do not recognise please",billing,synthetic,hand_written,billing_8
+i want to change my billing email address,billing,synthetic,hand_written,billing_9
+"good morning, i want to change my billing email address",billing,synthetic,hand_written,billing_9
+i want to change my billing email address thanks,billing,synthetic,hand_written,billing_9
+"excuse me, i want to change my billing email address can you help",billing,synthetic,hand_written,billing_9
+when will my next payment be taken,billing,synthetic,hand_written,billing_10
+"hey, when will my next payment be taken",billing,synthetic,hand_written,billing_10
+when will my next payment be taken asap,billing,synthetic,hand_written,billing_10
+"hello, when will my next payment be taken thanks",billing,synthetic,hand_written,billing_10
+can you add our company vat number to the invoice,billing,synthetic,hand_written,billing_11
+"good morning, can you add our company vat number to the invoice",billing,synthetic,hand_written,billing_11
+can you add our company vat number to the invoice asap,billing,synthetic,hand_written,billing_11
+"hi, can you add our company vat number to the invoice please",billing,synthetic,hand_written,billing_11
+i upgraded my plan but was billed the full amount,billing,synthetic,hand_written,billing_12
+quick question: i upgraded my plan but was billed the full amount,billing,synthetic,hand_written,billing_12
+i upgraded my plan but was billed the full amount please,billing,synthetic,hand_written,billing_12
+"hey, i upgraded my plan but was billed the full amount asap",billing,synthetic,hand_written,billing_12
+how do i pay by bank transfer instead of card,billing,synthetic,hand_written,billing_13
+"please help, how do i pay by bank transfer instead of card",billing,synthetic,hand_written,billing_13
+how do i pay by bank transfer instead of card asap,billing,synthetic,hand_written,billing_13
+"good morning, how do i pay by bank transfer instead of card please",billing,synthetic,hand_written,billing_13
+my trial ended and i was charged without warning,billing,synthetic,hand_written,billing_14
+"excuse me, my trial ended and i was charged without warning",billing,synthetic,hand_written,billing_14
+my trial ended and i was charged without warning can you help,billing,synthetic,hand_written,billing_14
+"please help, my trial ended and i was charged without warning please",billing,synthetic,hand_written,billing_14
+do you offer a discount for non profit organisations,billing,synthetic,hand_written,billing_15
+quick question: do you offer a discount for non profit organisations,billing,synthetic,hand_written,billing_15
+do you offer a discount for non profit organisations please,billing,synthetic,hand_written,billing_15
+"please help, do you offer a discount for non profit organisations asap",billing,synthetic,hand_written,billing_15
+i did not authorise this renewal and want my money back,billing,synthetic,hand_written,billing_16
+"good morning, i did not authorise this renewal and want my money back",billing,synthetic,hand_written,billing_16
+i did not authorise this renewal and want my money back any idea,billing,synthetic,hand_written,billing_16
+"please help, i did not authorise this renewal and want my money back asap",billing,synthetic,hand_written,billing_16
+the promo code from your newsletter is not working,billing,synthetic,hand_written,billing_17
+"please help, the promo code from your newsletter is not working",billing,synthetic,hand_written,billing_17
+the promo code from your newsletter is not working thanks,billing,synthetic,hand_written,billing_17
+"excuse me, the promo code from your newsletter is not working please",billing,synthetic,hand_written,billing_17
+how can i download all my receipts for the year,billing,synthetic,hand_written,billing_18
+"hi, how can i download all my receipts for the year",billing,synthetic,hand_written,billing_18
+how can i download all my receipts for the year any idea,billing,synthetic,hand_written,billing_18
+"hello, how can i download all my receipts for the year asap",billing,synthetic,hand_written,billing_18
+i paid the invoice but it still shows as overdue,billing,synthetic,hand_written,billing_19
+"hi, i paid the invoice but it still shows as overdue",billing,synthetic,hand_written,billing_19
+i paid the invoice but it still shows as overdue thanks,billing,synthetic,hand_written,billing_19
+"good morning, i paid the invoice but it still shows as overdue please",billing,synthetic,hand_written,billing_19
+can i get a credit note for the unused months,billing,synthetic,hand_written,billing_20
+quick question: can i get a credit note for the unused months,billing,synthetic,hand_written,billing_20
+can i get a credit note for the unused months asap,billing,synthetic,hand_written,billing_20
+quick question: can i get a credit note for the unused months any idea,billing,synthetic,hand_written,billing_20
+what happens to my billing if i remove five users,billing,synthetic,hand_written,billing_21
+"good morning, what happens to my billing if i remove five users",billing,synthetic,hand_written,billing_21
+what happens to my billing if i remove five users asap,billing,synthetic,hand_written,billing_21
+"hello, what happens to my billing if i remove five users asap",billing,synthetic,hand_written,billing_21
+i was charged tax but my company is tax exempt,billing,synthetic,hand_written,billing_22
+"hey, i was charged tax but my company is tax exempt",billing,synthetic,hand_written,billing_22
+i was charged tax but my company is tax exempt thanks,billing,synthetic,hand_written,billing_22
+"excuse me, i was charged tax but my company is tax exempt asap",billing,synthetic,hand_written,billing_22
+how do i see which card is on file,billing,synthetic,hand_written,billing_23
+"excuse me, how do i see which card is on file",billing,synthetic,hand_written,billing_23
+how do i see which card is on file any idea,billing,synthetic,hand_written,billing_23
+"excuse me, how do i see which card is on file please",billing,synthetic,hand_written,billing_23
+please send the invoice to our accounting department,billing,synthetic,hand_written,billing_24
+"please help, please send the invoice to our accounting department",billing,synthetic,hand_written,billing_24
+please send the invoice to our accounting department any idea,billing,synthetic,hand_written,billing_24
+"hello, please send the invoice to our accounting department thank you",billing,synthetic,hand_written,billing_24
+is the subscription fee refundable within thirty days,billing,synthetic,hand_written,billing_25
+"excuse me, is the subscription fee refundable within thirty days",billing,synthetic,hand_written,billing_25
+is the subscription fee refundable within thirty days thanks,billing,synthetic,hand_written,billing_25
+"hello, is the subscription fee refundable within thirty days can you help",billing,synthetic,hand_written,billing_25
+why is there a late fee on my account,billing,synthetic,hand_written,billing_26
+quick question: why is there a late fee on my account,billing,synthetic,hand_written,billing_26
+why is there a late fee on my account asap,billing,synthetic,hand_written,billing_26
+"excuse me, why is there a late fee on my account any idea",billing,synthetic,hand_written,billing_26
+i need to dispute a charge from last week,billing,synthetic,hand_written,billing_27
+"please help, i need to dispute a charge from last week",billing,synthetic,hand_written,billing_27
+i need to dispute a charge from last week thanks,billing,synthetic,hand_written,billing_27
+"excuse me, i need to dispute a charge from last week asap",billing,synthetic,hand_written,billing_27
+can i pause billing during the summer,billing,synthetic,hand_written,billing_28
+"good morning, can i pause billing during the summer",billing,synthetic,hand_written,billing_28
+can i pause billing during the summer please,billing,synthetic,hand_written,billing_28
+"hello, can i pause billing during the summer please",billing,synthetic,hand_written,billing_28
+what payment methods do you accept,billing,synthetic,hand_written,billing_29
+"good morning, what payment methods do you accept",billing,synthetic,hand_written,billing_29
+what payment methods do you accept asap,billing,synthetic,hand_written,billing_29
+quick question: what payment methods do you accept asap,billing,synthetic,hand_written,billing_29
+my subscription renewed at a higher price than before,billing,synthetic,hand_written,billing_30
+"hi, my subscription renewed at a higher price than before",billing,synthetic,hand_written,billing_30
+my subscription renewed at a higher price than before thanks,billing,synthetic,hand_written,billing_30
+"please help, my subscription renewed at a higher price than before any idea",billing,synthetic,hand_written,billing_30
+i want to be billed once a year instead of every month,billing,synthetic,hand_written,billing_31
+"hey, i want to be billed once a year instead of every month",billing,synthetic,hand_written,billing_31
+i want to be billed once a year instead of every month thanks,billing,synthetic,hand_written,billing_31
+"excuse me, i want to be billed once a year instead of every month can you help",billing,synthetic,hand_written,billing_31
+the receipt shows the wrong company name,billing,synthetic,hand_written,billing_32
+quick question: the receipt shows the wrong company name,billing,synthetic,hand_written,billing_32
+the receipt shows the wrong company name any idea,billing,synthetic,hand_written,billing_32
+quick question: the receipt shows the wrong company name thanks,billing,synthetic,hand_written,billing_32
+how much do i owe right now,billing,synthetic,hand_written,billing_33
+"hey, how much do i owe right now",billing,synthetic,hand_written,billing_33
+how much do i owe right now thanks,billing,synthetic,hand_written,billing_33
+"hello, how much do i owe right now any idea",billing,synthetic,hand_written,billing_33
+can i split the payment across two cards,billing,synthetic,hand_written,billing_34
+"please help, can i split the payment across two cards",billing,synthetic,hand_written,billing_34
+can i split the payment across two cards thank you,billing,synthetic,hand_written,billing_34
+"hey, can i split the payment across two cards any idea",billing,synthetic,hand_written,billing_34
+i got an email about a failed payment what should i do,billing,synthetic,hand_written,billing_35
+"please help, i got an email about a failed payment what should i do",billing,synthetic,hand_written,billing_35
+i got an email about a failed payment what should i do can you help,billing,synthetic,hand_written,billing_35
+"please help, i got an email about a failed payment what should i do can you help",billing,synthetic,hand_written,billing_35
+do you charge extra for additional storage,billing,synthetic,hand_written,billing_36
+"hey, do you charge extra for additional storage",billing,synthetic,hand_written,billing_36
+do you charge extra for additional storage thanks,billing,synthetic,hand_written,billing_36
+"hello, do you charge extra for additional storage thank you",billing,synthetic,hand_written,billing_36
+my refund was approved but i have not received it yet,billing,synthetic,hand_written,billing_37
+quick question: my refund was approved but i have not received it yet,billing,synthetic,hand_written,billing_37
+my refund was approved but i have not received it yet please,billing,synthetic,hand_written,billing_37
+"good morning, my refund was approved but i have not received it yet please",billing,synthetic,hand_written,billing_37
+can i get an itemised breakdown of this invoice,billing,synthetic,hand_written,billing_38
+"good morning, can i get an itemised breakdown of this invoice",billing,synthetic,hand_written,billing_38
+can i get an itemised breakdown of this invoice please,billing,synthetic,hand_written,billing_38
+"hello, can i get an itemised breakdown of this invoice any idea",billing,synthetic,hand_written,billing_38
+what is your cancellation fee,billing,synthetic,hand_written,billing_39
+"hello, what is your cancellation fee",billing,synthetic,hand_written,billing_39
+what is your cancellation fee any idea,billing,synthetic,hand_written,billing_39
+quick question: what is your cancellation fee thank you,billing,synthetic,hand_written,billing_39
+please update the billing address on my invoices,billing,synthetic,hand_written,billing_40
+"hi, please update the billing address on my invoices",billing,synthetic,hand_written,billing_40
+please update the billing address on my invoices can you help,billing,synthetic,hand_written,billing_40
+quick question: please update the billing address on my invoices thank you,billing,synthetic,hand_written,billing_40
+how do i apply a gift card to my balance,billing,synthetic,hand_written,billing_41
+quick question: how do i apply a gift card to my balance,billing,synthetic,hand_written,billing_41
+how do i apply a gift card to my balance thank you,billing,synthetic,hand_written,billing_41
+"hey, how do i apply a gift card to my balance thank you",billing,synthetic,hand_written,billing_41
+i was billed for a plan i never signed up for,billing,synthetic,hand_written,billing_42
+"good morning, i was billed for a plan i never signed up for",billing,synthetic,hand_written,billing_42
+i was billed for a plan i never signed up for please,billing,synthetic,hand_written,billing_42
+"excuse me, i was billed for a plan i never signed up for any idea",billing,synthetic,hand_written,billing_42
+can you explain the extra line on my bill,billing,synthetic,hand_written,billing_43
+"hi, can you explain the extra line on my bill",billing,synthetic,hand_written,billing_43
+can you explain the extra line on my bill any idea,billing,synthetic,hand_written,billing_43
+"please help, can you explain the extra line on my bill asap",billing,synthetic,hand_written,billing_43
+do you prorate when i switch plans mid month,billing,synthetic,hand_written,billing_44
+"good morning, do you prorate when i switch plans mid month",billing,synthetic,hand_written,billing_44
+do you prorate when i switch plans mid month any idea,billing,synthetic,hand_written,billing_44
+"hey, do you prorate when i switch plans mid month please",billing,synthetic,hand_written,billing_44
+my company paid already so why am i getting a payment reminder,billing,synthetic,hand_written,billing_45
+"hey, my company paid already so why am i getting a payment reminder",billing,synthetic,hand_written,billing_45
+my company paid already so why am i getting a payment reminder can you help,billing,synthetic,hand_written,billing_45
+"hello, my company paid already so why am i getting a payment reminder can you help",billing,synthetic,hand_written,billing_45
+can i change the currency i am billed in,billing,synthetic,hand_written,billing_46
+"hi, can i change the currency i am billed in",billing,synthetic,hand_written,billing_46
+can i change the currency i am billed in any idea,billing,synthetic,hand_written,billing_46
+"excuse me, can i change the currency i am billed in asap",billing,synthetic,hand_written,billing_46
+i want my money back the service is not what i expected,billing,synthetic,hand_written,billing_47
+"please help, i want my money back the service is not what i expected",billing,synthetic,hand_written,billing_47
+i want my money back the service is not what i expected thanks,billing,synthetic,hand_written,billing_47
+"please help, i want my money back the service is not what i expected please",billing,synthetic,hand_written,billing_47
+how do i turn off automatic renewal,billing,synthetic,hand_written,billing_48
+"good morning, how do i turn off automatic renewal",billing,synthetic,hand_written,billing_48
+how do i turn off automatic renewal any idea,billing,synthetic,hand_written,billing_48
+"hey, how do i turn off automatic renewal any idea",billing,synthetic,hand_written,billing_48
+the charge on my credit card is higher than the quoted price,billing,synthetic,hand_written,billing_49
+"please help, the charge on my credit card is higher than the quoted price",billing,synthetic,hand_written,billing_49
+the charge on my credit card is higher than the quoted price thank you,billing,synthetic,hand_written,billing_49
+"hello, the charge on my credit card is higher than the quoted price thanks",billing,synthetic,hand_written,billing_49
+can you reissue invoice number 4821 with a purchase order,billing,synthetic,hand_written,billing_50
+"hey, can you reissue invoice number 4821 with a purchase order",billing,synthetic,hand_written,billing_50
+can you reissue invoice number 4821 with a purchase order thanks,billing,synthetic,hand_written,billing_50
+"please help, can you reissue invoice number 4821 with a purchase order thank you",billing,synthetic,hand_written,billing_50
+what is the total cost if we have twenty seats,billing,synthetic,hand_written,billing_51
+"hi, what is the total cost if we have twenty seats",billing,synthetic,hand_written,billing_51
+what is the total cost if we have twenty seats thank you,billing,synthetic,hand_written,billing_51
+"hey, what is the total cost if we have twenty seats can you help",billing,synthetic,hand_written,billing_51
+i accidentally bought two licences can one be refunded,billing,synthetic,hand_written,billing_52
+"hi, i accidentally bought two licences can one be refunded",billing,synthetic,hand_written,billing_52
+i accidentally bought two licences can one be refunded please,billing,synthetic,hand_written,billing_52
+"hey, i accidentally bought two licences can one be refunded asap",billing,synthetic,hand_written,billing_52
+do i get charged when a team member is invited,billing,synthetic,hand_written,billing_53
+"hello, do i get charged when a team member is invited",billing,synthetic,hand_written,billing_53
+do i get charged when a team member is invited please,billing,synthetic,hand_written,billing_53
+"hello, do i get charged when a team member is invited thank you",billing,synthetic,hand_written,billing_53
+why was i charged after my free trial was cancelled,billing,synthetic,hand_written,billing_54
+"hi, why was i charged after my free trial was cancelled",billing,synthetic,hand_written,billing_54
+why was i charged after my free trial was cancelled please,billing,synthetic,hand_written,billing_54
+"excuse me, why was i charged after my free trial was cancelled can you help",billing,synthetic,hand_written,billing_54
+how do i get a refund for a duplicate payment,billing,synthetic,hand_written,billing_55
+"good morning, how do i get a refund for a duplicate payment",billing,synthetic,hand_written,billing_55
+how do i get a refund for a duplicate payment please,billing,synthetic,hand_written,billing_55
+"good morning, how do i get a refund for a duplicate payment thank you",billing,synthetic,hand_written,billing_55
+is there a student discount on the monthly plan,billing,synthetic,hand_written,billing_56
+"good morning, is there a student discount on the monthly plan",billing,synthetic,hand_written,billing_56
+is there a student discount on the monthly plan thanks,billing,synthetic,hand_written,billing_56
+"hello, is there a student discount on the monthly plan any idea",billing,synthetic,hand_written,billing_56
+my bank shows a pending charge from your company,billing,synthetic,hand_written,billing_57
+quick question: my bank shows a pending charge from your company,billing,synthetic,hand_written,billing_57
+my bank shows a pending charge from your company thank you,billing,synthetic,hand_written,billing_57
+"hello, my bank shows a pending charge from your company asap",billing,synthetic,hand_written,billing_57
+can i see my billing history for the last two years,billing,synthetic,hand_written,billing_58
+"please help, can i see my billing history for the last two years",billing,synthetic,hand_written,billing_58
+can i see my billing history for the last two years thank you,billing,synthetic,hand_written,billing_58
+quick question: can i see my billing history for the last two years thanks,billing,synthetic,hand_written,billing_58
+we need to move from invoice billing to credit card,billing,synthetic,hand_written,billing_59
+"please help, we need to move from invoice billing to credit card",billing,synthetic,hand_written,billing_59
+we need to move from invoice billing to credit card any idea,billing,synthetic,hand_written,billing_59
+"excuse me, we need to move from invoice billing to credit card thanks",billing,synthetic,hand_written,billing_59
+how long does a refund take to appear on my card,billing,synthetic,hand_written,billing_60
+"excuse me, how long does a refund take to appear on my card",billing,synthetic,hand_written,billing_60
+how long does a refund take to appear on my card asap,billing,synthetic,hand_written,billing_60
+quick question: how long does a refund take to appear on my card any idea,billing,synthetic,hand_written,billing_60
+what does the enterprise plan cost,billing,synthetic,hand_written,billing_61
+"excuse me, what does the enterprise plan cost",billing,synthetic,hand_written,billing_61
+what does the enterprise plan cost asap,billing,synthetic,hand_written,billing_61
+quick question: what does the enterprise plan cost thank you,billing,synthetic,hand_written,billing_61
+i see a charge for a feature i did not turn on,billing,synthetic,hand_written,billing_62
+quick question: i see a charge for a feature i did not turn on,billing,synthetic,hand_written,billing_62
+i see a charge for a feature i did not turn on please,billing,synthetic,hand_written,billing_62
+"hello, i see a charge for a feature i did not turn on thanks",billing,synthetic,hand_written,billing_62
+can you waive the overdue fee this once,billing,synthetic,hand_written,billing_63
+"hi, can you waive the overdue fee this once",billing,synthetic,hand_written,billing_63
+can you waive the overdue fee this once asap,billing,synthetic,hand_written,billing_63
+"hi, can you waive the overdue fee this once thank you",billing,synthetic,hand_written,billing_63
+the discount i was promised is missing from my invoice,billing,synthetic,hand_written,billing_64
+"please help, the discount i was promised is missing from my invoice",billing,synthetic,hand_written,billing_64
+the discount i was promised is missing from my invoice thanks,billing,synthetic,hand_written,billing_64
+"please help, the discount i was promised is missing from my invoice thanks",billing,synthetic,hand_written,billing_64
+please confirm that my payment of last friday went through,billing,synthetic,hand_written,billing_65
+"hi, please confirm that my payment of last friday went through",billing,synthetic,hand_written,billing_65
+please confirm that my payment of last friday went through please,billing,synthetic,hand_written,billing_65
+"excuse me, please confirm that my payment of last friday went through any idea",billing,synthetic,hand_written,billing_65
+how are taxes calculated on my subscription,billing,synthetic,hand_written,billing_66
+"hi, how are taxes calculated on my subscription",billing,synthetic,hand_written,billing_66
+how are taxes calculated on my subscription thanks,billing,synthetic,hand_written,billing_66
+"hi, how are taxes calculated on my subscription please",billing,synthetic,hand_written,billing_66
+can i get a quote for fifty users billed annually,billing,synthetic,hand_written,billing_67
+"good morning, can i get a quote for fifty users billed annually",billing,synthetic,hand_written,billing_67
+can i get a quote for fifty users billed annually asap,billing,synthetic,hand_written,billing_67
+"hi, can i get a quote for fifty users billed annually thank you",billing,synthetic,hand_written,billing_67
+what is the refund policy for add ons,billing,synthetic,hand_written,billing_68
+"hello, what is the refund policy for add ons",billing,synthetic,hand_written,billing_68
+what is the refund policy for add ons asap,billing,synthetic,hand_written,billing_68
+"excuse me, what is the refund policy for add ons can you help",billing,synthetic,hand_written,billing_68
+i need proof of payment for my expense report,billing,synthetic,hand_written,billing_69
+"hello, i need proof of payment for my expense report",billing,synthetic,hand_written,billing_69
+i need proof of payment for my expense report thank you,billing,synthetic,hand_written,billing_69
+"hello, i need proof of payment for my expense report any idea",billing,synthetic,hand_written,billing_69
+my invoice total does not add up,billing,synthetic,hand_written,billing_70
+"please help, my invoice total does not add up",billing,synthetic,hand_written,billing_70
+my invoice total does not add up thank you,billing,synthetic,hand_written,billing_70
+quick question: my invoice total does not add up thanks,billing,synthetic,hand_written,billing_70
+do you bill in advance or after usage,billing,synthetic,hand_written,billing_71
+"good morning, do you bill in advance or after usage",billing,synthetic,hand_written,billing_71
+do you bill in advance or after usage can you help,billing,synthetic,hand_written,billing_71
+"good morning, do you bill in advance or after usage can you help",billing,synthetic,hand_written,billing_71
+the dashboard will not load after i log in,technical,synthetic,hand_written,technical_0
+"hello, the dashboard will not load after i log in",technical,synthetic,hand_written,technical_0
+the dashboard will not load after i log in please,technical,synthetic,hand_written,technical_0
+"hi, the dashboard will not load after i log in any idea",technical,synthetic,hand_written,technical_0
+i keep getting a 500 error when i open the reports page,technical,synthetic,hand_written,technical_1
+quick question: i keep getting a 500 error when i open the reports page,technical,synthetic,hand_written,technical_1
+i keep getting a 500 error when i open the reports page asap,technical,synthetic,hand_written,technical_1
+quick question: i keep getting a 500 error when i open the reports page can you help,technical,synthetic,hand_written,technical_1
+it says my password is wrong but i am sure it is correct,technical,synthetic,hand_written,technical_2
+quick question: it says my password is wrong but i am sure it is correct,technical,synthetic,hand_written,technical_2
+it says my password is wrong but i am sure it is correct any idea,technical,synthetic,hand_written,technical_2
+"hi, it says my password is wrong but i am sure it is correct any idea",technical,synthetic,hand_written,technical_2
+the api returns 401 unauthorized with a valid key,technical,synthetic,hand_written,technical_3
+"excuse me, the api returns 401 unauthorized with a valid key",technical,synthetic,hand_written,technical_3
+the api returns 401 unauthorized with a valid key any idea,technical,synthetic,hand_written,technical_3
+"hi, the api returns 401 unauthorized with a valid key please",technical,synthetic,hand_written,technical_3
+the app crashes whenever i upload a large spreadsheet,technical,synthetic,hand_written,technical_4
+quick question: the app crashes whenever i upload a large spreadsheet,technical,synthetic,hand_written,technical_4
+the app crashes whenever i upload a large spreadsheet any idea,technical,synthetic,hand_written,technical_4
+"hey, the app crashes whenever i upload a large spreadsheet please",technical,synthetic,hand_written,technical_4
+the two factor code never arrives on my phone,technical,synthetic,hand_written,technical_5
+"hello, the two factor code never arrives on my phone",technical,synthetic,hand_written,technical_5
+the two factor code never arrives on my phone thanks,technical,synthetic,hand_written,technical_5
+"hello, the two factor code never arrives on my phone thank you",technical,synthetic,hand_written,technical_5
+exporting to pdf hangs and never finishes,technical,synthetic,hand_written,technical_6
+quick question: exporting to pdf hangs and never finishes,technical,synthetic,hand_written,technical_6
+exporting to pdf hangs and never finishes thanks,technical,synthetic,hand_written,technical_6
+quick question: exporting to pdf hangs and never finishes thanks,technical,synthetic,hand_written,technical_6
+my webhook is not being triggered when a record changes,technical,synthetic,hand_written,technical_7
+"hey, my webhook is not being triggered when a record changes",technical,synthetic,hand_written,technical_7
+my webhook is not being triggered when a record changes can you help,technical,synthetic,hand_written,technical_7
+"hello, my webhook is not being triggered when a record changes please",technical,synthetic,hand_written,technical_7
+the whole site is extremely slow today,technical,synthetic,hand_written,technical_8
+quick question: the whole site is extremely slow today,technical,synthetic,hand_written,technical_8
+the whole site is extremely slow today thank you,technical,synthetic,hand_written,technical_8
+"hi, the whole site is extremely slow today please",technical,synthetic,hand_written,technical_8
+the slack integration disconnected and will not reconnect,technical,synthetic,hand_written,technical_9
+"excuse me, the slack integration disconnected and will not reconnect",technical,synthetic,hand_written,technical_9
+the slack integration disconnected and will not reconnect thank you,technical,synthetic,hand_written,technical_9
+"good morning, the slack integration disconnected and will not reconnect please",technical,synthetic,hand_written,technical_9
+data sync has been stuck at fifty percent for hours,technical,synthetic,hand_written,technical_10
+"hi, data sync has been stuck at fifty percent for hours",technical,synthetic,hand_written,technical_10
+data sync has been stuck at fifty percent for hours thanks,technical,synthetic,hand_written,technical_10
+"hello, data sync has been stuck at fifty percent for hours can you help",technical,synthetic,hand_written,technical_10
+i get a blank page after clicking the login button,technical,synthetic,hand_written,technical_11
+quick question: i get a blank page after clicking the login button,technical,synthetic,hand_written,technical_11
+i get a blank page after clicking the login button can you help,technical,synthetic,hand_written,technical_11
+"hello, i get a blank page after clicking the login button can you help",technical,synthetic,hand_written,technical_11
+the password reset email never shows up in my inbox,technical,synthetic,hand_written,technical_12
+"hi, the password reset email never shows up in my inbox",technical,synthetic,hand_written,technical_12
+the password reset email never shows up in my inbox thanks,technical,synthetic,hand_written,technical_12
+quick question: the password reset email never shows up in my inbox please,technical,synthetic,hand_written,technical_12
+i am seeing error 429 too many requests from the api,technical,synthetic,hand_written,technical_13
+quick question: i am seeing error 429 too many requests from the api,technical,synthetic,hand_written,technical_13
+i am seeing error 429 too many requests from the api asap,technical,synthetic,hand_written,technical_13
+"good morning, i am seeing error 429 too many requests from the api can you help",technical,synthetic,hand_written,technical_13
+the mobile app closes by itself when i open it,technical,synthetic,hand_written,technical_14
+"hey, the mobile app closes by itself when i open it",technical,synthetic,hand_written,technical_14
+the mobile app closes by itself when i open it can you help,technical,synthetic,hand_written,technical_14
+"excuse me, the mobile app closes by itself when i open it any idea",technical,synthetic,hand_written,technical_14
+single sign on keeps sending me back to the login page in a loop,technical,synthetic,hand_written,technical_15
+"good morning, single sign on keeps sending me back to the login page in a loop",technical,synthetic,hand_written,technical_15
+single sign on keeps sending me back to the login page in a loop thank you,technical,synthetic,hand_written,technical_15
+"excuse me, single sign on keeps sending me back to the login page in a loop any idea",technical,synthetic,hand_written,technical_15
+files bigger than ten megabytes fail to upload,technical,synthetic,hand_written,technical_16
+quick question: files bigger than ten megabytes fail to upload,technical,synthetic,hand_written,technical_16
+files bigger than ten megabytes fail to upload thanks,technical,synthetic,hand_written,technical_16
+"hello, files bigger than ten megabytes fail to upload asap",technical,synthetic,hand_written,technical_16
+i am not getting any push notifications anymore,technical,synthetic,hand_written,technical_17
+"hello, i am not getting any push notifications anymore",technical,synthetic,hand_written,technical_17
+i am not getting any push notifications anymore please,technical,synthetic,hand_written,technical_17
+"please help, i am not getting any push notifications anymore any idea",technical,synthetic,hand_written,technical_17
+the date picker shows the wrong month,technical,synthetic,hand_written,technical_18
+"please help, the date picker shows the wrong month",technical,synthetic,hand_written,technical_18
+the date picker shows the wrong month please,technical,synthetic,hand_written,technical_18
+"excuse me, the date picker shows the wrong month asap",technical,synthetic,hand_written,technical_18
+the page says something went wrong try again later,technical,synthetic,hand_written,technical_19
+"hi, the page says something went wrong try again later",technical,synthetic,hand_written,technical_19
+the page says something went wrong try again later please,technical,synthetic,hand_written,technical_19
+"please help, the page says something went wrong try again later can you help",technical,synthetic,hand_written,technical_19
+my session expires after only a couple of minutes,technical,synthetic,hand_written,technical_20
+"please help, my session expires after only a couple of minutes",technical,synthetic,hand_written,technical_20
+my session expires after only a couple of minutes thank you,technical,synthetic,hand_written,technical_20
+"hello, my session expires after only a couple of minutes please",technical,synthetic,hand_written,technical_20
+the import tool rejects my file with a cryptic message,technical,synthetic,hand_written,technical_21
+"please help, the import tool rejects my file with a cryptic message",technical,synthetic,hand_written,technical_21
+the import tool rejects my file with a cryptic message please,technical,synthetic,hand_written,technical_21
+"good morning, the import tool rejects my file with a cryptic message thanks",technical,synthetic,hand_written,technical_21
+charts on the analytics page are empty,technical,synthetic,hand_written,technical_22
+"hi, charts on the analytics page are empty",technical,synthetic,hand_written,technical_22
+charts on the analytics page are empty thank you,technical,synthetic,hand_written,technical_22
+"hi, charts on the analytics page are empty any idea",technical,synthetic,hand_written,technical_22
+i cannot connect to the database through the connector,technical,synthetic,hand_written,technical_23
+"good morning, i cannot connect to the database through the connector",technical,synthetic,hand_written,technical_23
+i cannot connect to the database through the connector thanks,technical,synthetic,hand_written,technical_23
+quick question: i cannot connect to the database through the connector please,technical,synthetic,hand_written,technical_23
+the buttons on the settings page do not respond when clicked,technical,synthetic,hand_written,technical_24
+"please help, the buttons on the settings page do not respond when clicked",technical,synthetic,hand_written,technical_24
+the buttons on the settings page do not respond when clicked thanks,technical,synthetic,hand_written,technical_24
+"please help, the buttons on the settings page do not respond when clicked thank you",technical,synthetic,hand_written,technical_24
+my account is locked after too many login attempts,technical,synthetic,hand_written,technical_25
+"hi, my account is locked after too many login attempts",technical,synthetic,hand_written,technical_25
+my account is locked after too many login attempts thank you,technical,synthetic,hand_written,technical_25
+"hi, my account is locked after too many login attempts can you help",technical,synthetic,hand_written,technical_25
+the search function crashes the page,technical,synthetic,hand_written,technical_26
+"excuse me, the search function crashes the page",technical,synthetic,hand_written,technical_26
+the search function crashes the page thank you,technical,synthetic,hand_written,technical_26
+"please help, the search function crashes the page thank you",technical,synthetic,hand_written,technical_26
+i am getting a certificate error when opening your website,technical,synthetic,hand_written,technical_27
+"hey, i am getting a certificate error when opening your website",technical,synthetic,hand_written,technical_27
+i am getting a certificate error when opening your website asap,technical,synthetic,hand_written,technical_27
+"hello, i am getting a certificate error when opening your website any idea",technical,synthetic,hand_written,technical_27
+the browser extension stopped working after the last update,technical,synthetic,hand_written,technical_28
+"excuse me, the browser extension stopped working after the last update",technical,synthetic,hand_written,technical_28
+the browser extension stopped working after the last update asap,technical,synthetic,hand_written,technical_28
+"hello, the browser extension stopped working after the last update asap",technical,synthetic,hand_written,technical_28
+uploaded images show up as broken icons,technical,synthetic,hand_written,technical_29
+quick question: uploaded images show up as broken icons,technical,synthetic,hand_written,technical_29
+uploaded images show up as broken icons thanks,technical,synthetic,hand_written,technical_29
+"excuse me, uploaded images show up as broken icons any idea",technical,synthetic,hand_written,technical_29
+the sync client on my laptop uses all of my cpu,technical,synthetic,hand_written,technical_30
+"hey, the sync client on my laptop uses all of my cpu",technical,synthetic,hand_written,technical_30
+the sync client on my laptop uses all of my cpu can you help,technical,synthetic,hand_written,technical_30
+"hey, the sync client on my laptop uses all of my cpu please",technical,synthetic,hand_written,technical_30
+the api documentation example returns a syntax error,technical,synthetic,hand_written,technical_31
+"hi, the api documentation example returns a syntax error",technical,synthetic,hand_written,technical_31
+the api documentation example returns a syntax error can you help,technical,synthetic,hand_written,technical_31
+"please help, the api documentation example returns a syntax error thank you",technical,synthetic,hand_written,technical_31
+i cannot download my exported report the link is dead,technical,synthetic,hand_written,technical_32
+"hi, i cannot download my exported report the link is dead",technical,synthetic,hand_written,technical_32
+i cannot download my exported report the link is dead please,technical,synthetic,hand_written,technical_32
+"please help, i cannot download my exported report the link is dead thanks",technical,synthetic,hand_written,technical_32
+the page keeps refreshing by itself while i type,technical,synthetic,hand_written,technical_33
+"please help, the page keeps refreshing by itself while i type",technical,synthetic,hand_written,technical_33
+the page keeps refreshing by itself while i type asap,technical,synthetic,hand_written,technical_33
+"hello, the page keeps refreshing by itself while i type asap",technical,synthetic,hand_written,technical_33
+the calendar integration shows events at the wrong time,technical,synthetic,hand_written,technical_34
+"hi, the calendar integration shows events at the wrong time",technical,synthetic,hand_written,technical_34
+the calendar integration shows events at the wrong time thanks,technical,synthetic,hand_written,technical_34
+"hey, the calendar integration shows events at the wrong time asap",technical,synthetic,hand_written,technical_34
+my teammates see an error when they open my shared link,technical,synthetic,hand_written,technical_35
+"hello, my teammates see an error when they open my shared link",technical,synthetic,hand_written,technical_35
+my teammates see an error when they open my shared link can you help,technical,synthetic,hand_written,technical_35
+"good morning, my teammates see an error when they open my shared link thank you",technical,synthetic,hand_written,technical_35
+the loading spinner never goes away on the home screen,technical,synthetic,hand_written,technical_36
+"excuse me, the loading spinner never goes away on the home screen",technical,synthetic,hand_written,technical_36
+the loading spinner never goes away on the home screen asap,technical,synthetic,hand_written,technical_36
+"please help, the loading spinner never goes away on the home screen any idea",technical,synthetic,hand_written,technical_36
+the app works on chrome but fails on safari,technical,synthetic,hand_written,technical_37
+"please help, the app works on chrome but fails on safari",technical,synthetic,hand_written,technical_37
+the app works on chrome but fails on safari please,technical,synthetic,hand_written,technical_37
+"excuse me, the app works on chrome but fails on safari thank you",technical,synthetic,hand_written,technical_37
+scheduled jobs did not run last night,technical,synthetic,hand_written,technical_38
+"hey, scheduled jobs did not run last night",technical,synthetic,hand_written,technical_38
+scheduled jobs did not run last night any idea,technical,synthetic,hand_written,technical_38
+"hi, scheduled jobs did not run last night thanks",technical,synthetic,hand_written,technical_38
+i cannot log in with my google account anymore,technical,synthetic,hand_written,technical_39
+"hey, i cannot log in with my google account anymore",technical,synthetic,hand_written,technical_39
+i cannot log in with my google account anymore please,technical,synthetic,hand_written,technical_39
+"hi, i cannot log in with my google account anymore any idea",technical,synthetic,hand_written,technical_39
+the sdk throws a null pointer exception on startup,technical,synthetic,hand_written,technical_40
+"please help, the sdk throws a null pointer exception on startup",technical,synthetic,hand_written,technical_40
+the sdk throws a null pointer exception on startup thanks,technical,synthetic,hand_written,technical_40
+"hey, the sdk throws a null pointer exception on startup asap",technical,synthetic,hand_written,technical_40
+the status shows green but nothing works for me,technical,synthetic,hand_written,technical_41
+"please help, the status shows green but nothing works for me",technical,synthetic,hand_written,technical_41
+the status shows green but nothing works for me thanks,technical,synthetic,hand_written,technical_41
+"excuse me, the status shows green but nothing works for me asap",technical,synthetic,hand_written,technical_41
+the app logged me out and all my unsaved changes vanished,technical,synthetic,hand_written,technical_42
+"hello, the app logged me out and all my unsaved changes vanished",technical,synthetic,hand_written,technical_42
+the app logged me out and all my unsaved changes vanished any idea,technical,synthetic,hand_written,technical_42
+"excuse me, the app logged me out and all my unsaved changes vanished asap",technical,synthetic,hand_written,technical_42
+i get a timeout every time i run a big query,technical,synthetic,hand_written,technical_43
+"please help, i get a timeout every time i run a big query",technical,synthetic,hand_written,technical_43
+i get a timeout every time i run a big query can you help,technical,synthetic,hand_written,technical_43
+"hey, i get a timeout every time i run a big query please",technical,synthetic,hand_written,technical_43
+the email integration is sending duplicates,technical,synthetic,hand_written,technical_44
+"hi, the email integration is sending duplicates",technical,synthetic,hand_written,technical_44
+the email integration is sending duplicates any idea,technical,synthetic,hand_written,technical_44
+quick question: the email integration is sending duplicates asap,technical,synthetic,hand_written,technical_44
+the installer fails halfway on windows,technical,synthetic,hand_written,technical_45
+"hi, the installer fails halfway on windows",technical,synthetic,hand_written,technical_45
+the installer fails halfway on windows please,technical,synthetic,hand_written,technical_45
+"hey, the installer fails halfway on windows thanks",technical,synthetic,hand_written,technical_45
+my data disappeared from the dashboard this morning,technical,synthetic,hand_written,technical_46
+"excuse me, my data disappeared from the dashboard this morning",technical,synthetic,hand_written,technical_46
+my data disappeared from the dashboard this morning asap,technical,synthetic,hand_written,technical_46
+"hello, my data disappeared from the dashboard this morning any idea",technical,synthetic,hand_written,technical_46
+attachments will not open they show a corrupt file message,technical,synthetic,hand_written,technical_47
+quick question: attachments will not open they show a corrupt file message,technical,synthetic,hand_written,technical_47
+attachments will not open they show a corrupt file message thank you,technical,synthetic,hand_written,technical_47
+"excuse me, attachments will not open they show a corrupt file message can you help",technical,synthetic,hand_written,technical_47
+the vpn blocks access to your service how do i fix it,technical,synthetic,hand_written,technical_48
+"please help, the vpn blocks access to your service how do i fix it",technical,synthetic,hand_written,technical_48
+the vpn blocks access to your service how do i fix it please,technical,synthetic,hand_written,technical_48
+"hi, the vpn blocks access to your service how do i fix it please",technical,synthetic,hand_written,technical_48
+the oauth callback returns invalid redirect uri,technical,synthetic,hand_written,technical_49
+"excuse me, the oauth callback returns invalid redirect uri",technical,synthetic,hand_written,technical_49
+the oauth callback returns invalid redirect uri thanks,technical,synthetic,hand_written,technical_49
+"please help, the oauth callback returns invalid redirect uri please",technical,synthetic,hand_written,technical_49
+the text editor lags badly when i type quickly,technical,synthetic,hand_written,technical_50
+"good morning, the text editor lags badly when i type quickly",technical,synthetic,hand_written,technical_50
+the text editor lags badly when i type quickly asap,technical,synthetic,hand_written,technical_50
+"please help, the text editor lags badly when i type quickly thank you",technical,synthetic,hand_written,technical_50
+i keep seeing a database connection error,technical,synthetic,hand_written,technical_51
+"hello, i keep seeing a database connection error",technical,synthetic,hand_written,technical_51
+i keep seeing a database connection error can you help,technical,synthetic,hand_written,technical_51
+"hello, i keep seeing a database connection error please",technical,synthetic,hand_written,technical_51
+the app shows an old version of my data after refreshing,technical,synthetic,hand_written,technical_52
+"hey, the app shows an old version of my data after refreshing",technical,synthetic,hand_written,technical_52
+the app shows an old version of my data after refreshing asap,technical,synthetic,hand_written,technical_52
+"good morning, the app shows an old version of my data after refreshing please",technical,synthetic,hand_written,technical_52
+the print layout cuts off the right side of the page,technical,synthetic,hand_written,technical_53
+"hey, the print layout cuts off the right side of the page",technical,synthetic,hand_written,technical_53
+the print layout cuts off the right side of the page thanks,technical,synthetic,hand_written,technical_53
+"excuse me, the print layout cuts off the right side of the page thanks",technical,synthetic,hand_written,technical_53
+typing in the comment box is delayed by several seconds,technical,synthetic,hand_written,technical_54
+"excuse me, typing in the comment box is delayed by several seconds",technical,synthetic,hand_written,technical_54
+typing in the comment box is delayed by several seconds please,technical,synthetic,hand_written,technical_54
+"hey, typing in the comment box is delayed by several seconds thank you",technical,synthetic,hand_written,technical_54
+the integration token expired and i cannot renew it,technical,synthetic,hand_written,technical_55
+"good morning, the integration token expired and i cannot renew it",technical,synthetic,hand_written,technical_55
+the integration token expired and i cannot renew it can you help,technical,synthetic,hand_written,technical_55
+"please help, the integration token expired and i cannot renew it any idea",technical,synthetic,hand_written,technical_55
+the offline sync overwrote my latest changes,technical,synthetic,hand_written,technical_56
+"hello, the offline sync overwrote my latest changes",technical,synthetic,hand_written,technical_56
+the offline sync overwrote my latest changes thanks,technical,synthetic,hand_written,technical_56
+"good morning, the offline sync overwrote my latest changes thanks",technical,synthetic,hand_written,technical_56
+i cannot see the new tab everyone else has,technical,synthetic,hand_written,technical_57
+"good morning, i cannot see the new tab everyone else has",technical,synthetic,hand_written,technical_57
+i cannot see the new tab everyone else has thanks,technical,synthetic,hand_written,technical_57
+quick question: i cannot see the new tab everyone else has please,technical,synthetic,hand_written,technical_57
+drag and drop stopped working in the board view,technical,synthetic,hand_written,technical_58
+"hello, drag and drop stopped working in the board view",technical,synthetic,hand_written,technical_58
+drag and drop stopped working in the board view any idea,technical,synthetic,hand_written,technical_58
+"hey, drag and drop stopped working in the board view can you help",technical,synthetic,hand_written,technical_58
+the bulk delete button throws an exception,technical,synthetic,hand_written,technical_59
+"good morning, the bulk delete button throws an exception",technical,synthetic,hand_written,technical_59
+the bulk delete button throws an exception any idea,technical,synthetic,hand_written,technical_59
+"good morning, the bulk delete button throws an exception any idea",technical,synthetic,hand_written,technical_59
+the app says i have no permission although i am admin,technical,synthetic,hand_written,technical_60
+"good morning, the app says i have no permission although i am admin",technical,synthetic,hand_written,technical_60
+the app says i have no permission although i am admin thanks,technical,synthetic,hand_written,technical_60
+"hey, the app says i have no permission although i am admin thanks",technical,synthetic,hand_written,technical_60
+emails from your system land in spam,technical,synthetic,hand_written,technical_61
+"good morning, emails from your system land in spam",technical,synthetic,hand_written,technical_61
+emails from your system land in spam any idea,technical,synthetic,hand_written,technical_61
+"hi, emails from your system land in spam can you help",technical,synthetic,hand_written,technical_61
+the mobile app will not install on my android phone,technical,synthetic,hand_written,technical_62
+"good morning, the mobile app will not install on my android phone",technical,synthetic,hand_written,technical_62
+the mobile app will not install on my android phone please,technical,synthetic,hand_written,technical_62
+"good morning, the mobile app will not install on my android phone can you help",technical,synthetic,hand_written,technical_62
+the report generator produces a blank file,technical,synthetic,hand_written,technical_63
+"hello, the report generator produces a blank file",technical,synthetic,hand_written,technical_63
+the report generator produces a blank file thanks,technical,synthetic,hand_written,technical_63
+"good morning, the report generator produces a blank file can you help",technical,synthetic,hand_written,technical_63
+my api key was rejected right after i created it,technical,synthetic,hand_written,technical_64
+"hey, my api key was rejected right after i created it",technical,synthetic,hand_written,technical_64
+my api key was rejected right after i created it asap,technical,synthetic,hand_written,technical_64
+"good morning, my api key was rejected right after i created it thanks",technical,synthetic,hand_written,technical_64
+the app froze and i had to restart my computer,technical,synthetic,hand_written,technical_65
+"hello, the app froze and i had to restart my computer",technical,synthetic,hand_written,technical_65
+the app froze and i had to restart my computer please,technical,synthetic,hand_written,technical_65
+"excuse me, the app froze and i had to restart my computer thanks",technical,synthetic,hand_written,technical_65
+there is a javascript error in the browser console on every page,technical,synthetic,hand_written,technical_66
+quick question: there is a javascript error in the browser console on every page,technical,synthetic,hand_written,technical_66
+there is a javascript error in the browser console on every page asap,technical,synthetic,hand_written,technical_66
+"hey, there is a javascript error in the browser console on every page please",technical,synthetic,hand_written,technical_66
+videos in the help centre will not play,technical,synthetic,hand_written,technical_67
+"good morning, videos in the help centre will not play",technical,synthetic,hand_written,technical_67
+videos in the help centre will not play asap,technical,synthetic,hand_written,technical_67
+"hey, videos in the help centre will not play any idea",technical,synthetic,hand_written,technical_67
+the live chat widget does not open on my site,technical,synthetic,hand_written,technical_68
+"please help, the live chat widget does not open on my site",technical,synthetic,hand_written,technical_68
+the live chat widget does not open on my site can you help,technical,synthetic,hand_written,technical_68
+"excuse me, the live chat widget does not open on my site thank you",technical,synthetic,hand_written,technical_68
+the checkout page of my store built with your tool shows an error,technical,synthetic,hand_written,technical_69
+"hey, the checkout page of my store built with your tool shows an error",technical,synthetic,hand_written,technical_69
+the checkout page of my store built with your tool shows an error please,technical,synthetic,hand_written,technical_69
+"hi, the checkout page of my store built with your tool shows an error asap",technical,synthetic,hand_written,technical_69
+csv exports come out with garbled characters,technical,synthetic,hand_written,technical_70
+"hello, csv exports come out with garbled characters",technical,synthetic,hand_written,technical_70
+csv exports come out with garbled characters thank you,technical,synthetic,hand_written,technical_70
+"hey, csv exports come out with garbled characters please",technical,synthetic,hand_written,technical_70
+the autosave indicator is stuck on saving,technical,synthetic,hand_written,technical_71
+"hi, the autosave indicator is stuck on saving",technical,synthetic,hand_written,technical_71
+the autosave indicator is stuck on saving thank you,technical,synthetic,hand_written,technical_71
+quick question: the autosave indicator is stuck on saving asap,technical,synthetic,hand_written,technical_71
+two of my users cannot accept their invitation link,technical,synthetic,hand_written,technical_72
+"excuse me, two of my users cannot accept their invitation link",technical,synthetic,hand_written,technical_72
+two of my users cannot accept their invitation link asap,technical,synthetic,hand_written,technical_72
+quick question: two of my users cannot accept their invitation link thank you,technical,synthetic,hand_written,technical_72
+your service is down for me right now,technical,synthetic,hand_written,technical_73
+"please help, your service is down for me right now",technical,synthetic,hand_written,technical_73
+your service is down for me right now please,technical,synthetic,hand_written,technical_73
+quick question: your service is down for me right now thank you,technical,synthetic,hand_written,technical_73
+i would love a dark mode for the whole app,feature_request,synthetic,hand_written,feature_request_0
+"hello, i would love a dark mode for the whole app",feature_request,synthetic,hand_written,feature_request_0
+i would love a dark mode for the whole app asap,feature_request,synthetic,hand_written,feature_request_0
+"hi, i would love a dark mode for the whole app any idea",feature_request,synthetic,hand_written,feature_request_0
+it would be great if you supported single sign on with okta,feature_request,synthetic,hand_written,feature_request_1
+quick question: it would be great if you supported single sign on with okta,feature_request,synthetic,hand_written,feature_request_1
+it would be great if you supported single sign on with okta please,feature_request,synthetic,hand_written,feature_request_1
+"please help, it would be great if you supported single sign on with okta thank you",feature_request,synthetic,hand_written,feature_request_1
+can you add a calendar view for tasks,feature_request,synthetic,hand_written,feature_request_2
+"excuse me, can you add a calendar view for tasks",feature_request,synthetic,hand_written,feature_request_2
+can you add a calendar view for tasks any idea,feature_request,synthetic,hand_written,feature_request_2
+"excuse me, can you add a calendar view for tasks any idea",feature_request,synthetic,hand_written,feature_request_2
+please add bulk editing for records,feature_request,synthetic,hand_written,feature_request_3
+"excuse me, please add bulk editing for records",feature_request,synthetic,hand_written,feature_request_3
+please add bulk editing for records thanks,feature_request,synthetic,hand_written,feature_request_3
+"hey, please add bulk editing for records can you help",feature_request,synthetic,hand_written,feature_request_3
+we need role based permissions for our team,feature_request,synthetic,hand_written,feature_request_4
+"hi, we need role based permissions for our team",feature_request,synthetic,hand_written,feature_request_4
+we need role based permissions for our team any idea,feature_request,synthetic,hand_written,feature_request_4
+"hey, we need role based permissions for our team thank you",feature_request,synthetic,hand_written,feature_request_4
+any plans to add support for german,feature_request,synthetic,hand_written,feature_request_5
+"hey, any plans to add support for german",feature_request,synthetic,hand_written,feature_request_5
+any plans to add support for german any idea,feature_request,synthetic,hand_written,feature_request_5
+"good morning, any plans to add support for german please",feature_request,synthetic,hand_written,feature_request_5
+i wish there was an android app,feature_request,synthetic,hand_written,feature_request_6
+"excuse me, i wish there was an android app",feature_request,synthetic,hand_written,feature_request_6
+i wish there was an android app asap,feature_request,synthetic,hand_written,feature_request_6
+"please help, i wish there was an android app asap",feature_request,synthetic,hand_written,feature_request_6
+please build an integration with jira,feature_request,synthetic,hand_written,feature_request_7
+"excuse me, please build an integration with jira",feature_request,synthetic,hand_written,feature_request_7
+please build an integration with jira can you help,feature_request,synthetic,hand_written,feature_request_7
+"hey, please build an integration with jira can you help",feature_request,synthetic,hand_written,feature_request_7
+it would be nice to schedule reports to arrive by email,feature_request,synthetic,hand_written,feature_request_8
+"excuse me, it would be nice to schedule reports to arrive by email",feature_request,synthetic,hand_written,feature_request_8
+it would be nice to schedule reports to arrive by email asap,feature_request,synthetic,hand_written,feature_request_8
+"please help, it would be nice to schedule reports to arrive by email thanks",feature_request,synthetic,hand_written,feature_request_8
+suggestion add keyboard shortcuts for common actions,feature_request,synthetic,hand_written,feature_request_9
+"hello, suggestion add keyboard shortcuts for common actions",feature_request,synthetic,hand_written,feature_request_9
+suggestion add keyboard shortcuts for common actions can you help,feature_request,synthetic,hand_written,feature_request_9
+"excuse me, suggestion add keyboard shortcuts for common actions can you help",feature_request,synthetic,hand_written,feature_request_9
+we would like custom fields on every contact,feature_request,synthetic,hand_written,feature_request_10
+"excuse me, we would like custom fields on every contact",feature_request,synthetic,hand_written,feature_request_10
+we would like custom fields on every contact any idea,feature_request,synthetic,hand_written,feature_request_10
+"hello, we would like custom fields on every contact thank you",feature_request,synthetic,hand_written,feature_request_10
+can you add an undo button after deleting items,feature_request,synthetic,hand_written,feature_request_11
+"please help, can you add an undo button after deleting items",feature_request,synthetic,hand_written,feature_request_11
+can you add an undo button after deleting items asap,feature_request,synthetic,hand_written,feature_request_11
+quick question: can you add an undo button after deleting items thank you,feature_request,synthetic,hand_written,feature_request_11
+please create a zapier integration,feature_request,synthetic,hand_written,feature_request_12
+"good morning, please create a zapier integration",feature_request,synthetic,hand_written,feature_request_12
+please create a zapier integration please,feature_request,synthetic,hand_written,feature_request_12
+"hey, please create a zapier integration asap",feature_request,synthetic,hand_written,feature_request_12
+feature idea a kanban board for projects,feature_request,synthetic,hand_written,feature_request_13
+"hello, feature idea a kanban board for projects",feature_request,synthetic,hand_written,feature_request_13
+feature idea a kanban board for projects can you help,feature_request,synthetic,hand_written,feature_request_13
+"good morning, feature idea a kanban board for projects thank you",feature_request,synthetic,hand_written,feature_request_13
+do you plan to offer a public api for the analytics data,feature_request,synthetic,hand_written,feature_request_14
+"please help, do you plan to offer a public api for the analytics data",feature_request,synthetic,hand_written,feature_request_14
+do you plan to offer a public api for the analytics data any idea,feature_request,synthetic,hand_written,feature_request_14
+"hey, do you plan to offer a public api for the analytics data can you help",feature_request,synthetic,hand_written,feature_request_14
+it would help if we could pin favourite dashboards,feature_request,synthetic,hand_written,feature_request_15
+quick question: it would help if we could pin favourite dashboards,feature_request,synthetic,hand_written,feature_request_15
+it would help if we could pin favourite dashboards can you help,feature_request,synthetic,hand_written,feature_request_15
+"excuse me, it would help if we could pin favourite dashboards thanks",feature_request,synthetic,hand_written,feature_request_15
+please consider adding two level approval workflows,feature_request,synthetic,hand_written,feature_request_16
+"please help, please consider adding two level approval workflows",feature_request,synthetic,hand_written,feature_request_16
+please consider adding two level approval workflows can you help,feature_request,synthetic,hand_written,feature_request_16
+"good morning, please consider adding two level approval workflows any idea",feature_request,synthetic,hand_written,feature_request_16
+i would like to export my data to excel with formatting,feature_request,synthetic,hand_written,feature_request_17
+"hello, i would like to export my data to excel with formatting",feature_request,synthetic,hand_written,feature_request_17
+i would like to export my data to excel with formatting any idea,feature_request,synthetic,hand_written,feature_request_17
+"hi, i would like to export my data to excel with formatting asap",feature_request,synthetic,hand_written,feature_request_17
+can you add a way to comment on individual rows,feature_request,synthetic,hand_written,feature_request_18
+"please help, can you add a way to comment on individual rows",feature_request,synthetic,hand_written,feature_request_18
+can you add a way to comment on individual rows any idea,feature_request,synthetic,hand_written,feature_request_18
+"excuse me, can you add a way to comment on individual rows thank you",feature_request,synthetic,hand_written,feature_request_18
+we need an audit log of who changed what,feature_request,synthetic,hand_written,feature_request_19
+"hey, we need an audit log of who changed what",feature_request,synthetic,hand_written,feature_request_19
+we need an audit log of who changed what please,feature_request,synthetic,hand_written,feature_request_19
+"good morning, we need an audit log of who changed what thanks",feature_request,synthetic,hand_written,feature_request_19
+please add the ability to attach files to tasks,feature_request,synthetic,hand_written,feature_request_20
+"excuse me, please add the ability to attach files to tasks",feature_request,synthetic,hand_written,feature_request_20
+please add the ability to attach files to tasks asap,feature_request,synthetic,hand_written,feature_request_20
+"hello, please add the ability to attach files to tasks thanks",feature_request,synthetic,hand_written,feature_request_20
+it would be useful to have a dashboard widget for overdue items,feature_request,synthetic,hand_written,feature_request_21
+"hello, it would be useful to have a dashboard widget for overdue items",feature_request,synthetic,hand_written,feature_request_21
+it would be useful to have a dashboard widget for overdue items please,feature_request,synthetic,hand_written,feature_request_21
+"hi, it would be useful to have a dashboard widget for overdue items thanks",feature_request,synthetic,hand_written,feature_request_21
+could you add support for markdown in notes,feature_request,synthetic,hand_written,feature_request_22
+quick question: could you add support for markdown in notes,feature_request,synthetic,hand_written,feature_request_22
+could you add support for markdown in notes thank you,feature_request,synthetic,hand_written,feature_request_22
+"good morning, could you add support for markdown in notes please",feature_request,synthetic,hand_written,feature_request_22
+is there a roadmap and can you add recurring tasks to it,feature_request,synthetic,hand_written,feature_request_23
+quick question: is there a roadmap and can you add recurring tasks to it,feature_request,synthetic,hand_written,feature_request_23
+is there a roadmap and can you add recurring tasks to it can you help,feature_request,synthetic,hand_written,feature_request_23
+"excuse me, is there a roadmap and can you add recurring tasks to it thank you",feature_request,synthetic,hand_written,feature_request_23
+i propose adding a global search across all projects,feature_request,synthetic,hand_written,feature_request_24
+"hello, i propose adding a global search across all projects",feature_request,synthetic,hand_written,feature_request_24
+i propose adding a global search across all projects any idea,feature_request,synthetic,hand_written,feature_request_24
+"excuse me, i propose adding a global search across all projects can you help",feature_request,synthetic,hand_written,feature_request_24
+please make it possible to merge two workspaces,feature_request,synthetic,hand_written,feature_request_25
+quick question: please make it possible to merge two workspaces,feature_request,synthetic,hand_written,feature_request_25
+please make it possible to merge two workspaces can you help,feature_request,synthetic,hand_written,feature_request_25
+"hello, please make it possible to merge two workspaces thanks",feature_request,synthetic,hand_written,feature_request_25
+we want to be able to customise the email templates,feature_request,synthetic,hand_written,feature_request_26
+"excuse me, we want to be able to customise the email templates",feature_request,synthetic,hand_written,feature_request_26
+we want to be able to customise the email templates any idea,feature_request,synthetic,hand_written,feature_request_26
+"hi, we want to be able to customise the email templates please",feature_request,synthetic,hand_written,feature_request_26
+an option to hide completed items would be really helpful,feature_request,synthetic,hand_written,feature_request_27
+"good morning, an option to hide completed items would be really helpful",feature_request,synthetic,hand_written,feature_request_27
+an option to hide completed items would be really helpful can you help,feature_request,synthetic,hand_written,feature_request_27
+"hello, an option to hide completed items would be really helpful thanks",feature_request,synthetic,hand_written,feature_request_27
+add a time tracking feature to every task,feature_request,synthetic,hand_written,feature_request_28
+"good morning, add a time tracking feature to every task",feature_request,synthetic,hand_written,feature_request_28
+add a time tracking feature to every task any idea,feature_request,synthetic,hand_written,feature_request_28
+"please help, add a time tracking feature to every task can you help",feature_request,synthetic,hand_written,feature_request_28
+a templates library for new projects would save us hours,feature_request,synthetic,hand_written,feature_request_29
+"hi, a templates library for new projects would save us hours",feature_request,synthetic,hand_written,feature_request_29
+a templates library for new projects would save us hours thank you,feature_request,synthetic,hand_written,feature_request_29
+"hello, a templates library for new projects would save us hours please",feature_request,synthetic,hand_written,feature_request_29
+can you add a countdown timer to the dashboard,feature_request,synthetic,hand_written,feature_request_30
+quick question: can you add a countdown timer to the dashboard,feature_request,synthetic,hand_written,feature_request_30
+can you add a countdown timer to the dashboard thanks,feature_request,synthetic,hand_written,feature_request_30
+"good morning, can you add a countdown timer to the dashboard can you help",feature_request,synthetic,hand_written,feature_request_30
+i would like the ability to create private boards,feature_request,synthetic,hand_written,feature_request_31
+"excuse me, i would like the ability to create private boards",feature_request,synthetic,hand_written,feature_request_31
+i would like the ability to create private boards thank you,feature_request,synthetic,hand_written,feature_request_31
+"please help, i would like the ability to create private boards thank you",feature_request,synthetic,hand_written,feature_request_31
+would you consider adding a built in video call button,feature_request,synthetic,hand_written,feature_request_32
+"hey, would you consider adding a built in video call button",feature_request,synthetic,hand_written,feature_request_32
+would you consider adding a built in video call button can you help,feature_request,synthetic,hand_written,feature_request_32
+"please help, would you consider adding a built in video call button any idea",feature_request,synthetic,hand_written,feature_request_32
+please let us set our own colour theme,feature_request,synthetic,hand_written,feature_request_33
+"please help, please let us set our own colour theme",feature_request,synthetic,hand_written,feature_request_33
+please let us set our own colour theme can you help,feature_request,synthetic,hand_written,feature_request_33
+"good morning, please let us set our own colour theme thank you",feature_request,synthetic,hand_written,feature_request_33
+we need an approval step before invoices are sent,feature_request,synthetic,hand_written,feature_request_34
+quick question: we need an approval step before invoices are sent,feature_request,synthetic,hand_written,feature_request_34
+we need an approval step before invoices are sent thanks,feature_request,synthetic,hand_written,feature_request_34
+"excuse me, we need an approval step before invoices are sent can you help",feature_request,synthetic,hand_written,feature_request_34
+can you build a plugin marketplace,feature_request,synthetic,hand_written,feature_request_35
+quick question: can you build a plugin marketplace,feature_request,synthetic,hand_written,feature_request_35
+can you build a plugin marketplace asap,feature_request,synthetic,hand_written,feature_request_35
+"good morning, can you build a plugin marketplace thanks",feature_request,synthetic,hand_written,feature_request_35
+it would be cool to get a weekly summary email of activity,feature_request,synthetic,hand_written,feature_request_36
+"good morning, it would be cool to get a weekly summary email of activity",feature_request,synthetic,hand_written,feature_request_36
+it would be cool to get a weekly summary email of activity any idea,feature_request,synthetic,hand_written,feature_request_36
+"hey, it would be cool to get a weekly summary email of activity thank you",feature_request,synthetic,hand_written,feature_request_36
+please add drag and drop for the sidebar menu order,feature_request,synthetic,hand_written,feature_request_37
+quick question: please add drag and drop for the sidebar menu order,feature_request,synthetic,hand_written,feature_request_37
+please add drag and drop for the sidebar menu order any idea,feature_request,synthetic,hand_written,feature_request_37
+"hello, please add drag and drop for the sidebar menu order asap",feature_request,synthetic,hand_written,feature_request_37
+feature request support for sub tasks within sub tasks,feature_request,synthetic,hand_written,feature_request_38
+quick question: feature request support for sub tasks within sub tasks,feature_request,synthetic,hand_written,feature_request_38
+feature request support for sub tasks within sub tasks please,feature_request,synthetic,hand_written,feature_request_38
+"excuse me, feature request support for sub tasks within sub tasks asap",feature_request,synthetic,hand_written,feature_request_38
+give us a way to set default values for new records,feature_request,synthetic,hand_written,feature_request_39
+"hello, give us a way to set default values for new records",feature_request,synthetic,hand_written,feature_request_39
+give us a way to set default values for new records asap,feature_request,synthetic,hand_written,feature_request_39
+"hey, give us a way to set default values for new records asap",feature_request,synthetic,hand_written,feature_request_39
+i would like read only links for sharing with clients,feature_request,synthetic,hand_written,feature_request_40
+"please help, i would like read only links for sharing with clients",feature_request,synthetic,hand_written,feature_request_40
+i would like read only links for sharing with clients please,feature_request,synthetic,hand_written,feature_request_40
+"hello, i would like read only links for sharing with clients thanks",feature_request,synthetic,hand_written,feature_request_40
+can you add voice input for creating notes,feature_request,synthetic,hand_written,feature_request_41
+"hello, can you add voice input for creating notes",feature_request,synthetic,hand_written,feature_request_41
+can you add voice input for creating notes can you help,feature_request,synthetic,hand_written,feature_request_41
+"excuse me, can you add voice input for creating notes thanks",feature_request,synthetic,hand_written,feature_request_41
+we would pay extra for a white label option,feature_request,synthetic,hand_written,feature_request_42
+"excuse me, we would pay extra for a white label option",feature_request,synthetic,hand_written,feature_request_42
+we would pay extra for a white label option thanks,feature_request,synthetic,hand_written,feature_request_42
+"hi, we would pay extra for a white label option can you help",feature_request,synthetic,hand_written,feature_request_42
+please add a bulk import for team members,feature_request,synthetic,hand_written,feature_request_43
+quick question: please add a bulk import for team members,feature_request,synthetic,hand_written,feature_request_43
+please add a bulk import for team members asap,feature_request,synthetic,hand_written,feature_request_43
+"please help, please add a bulk import for team members can you help",feature_request,synthetic,hand_written,feature_request_43
+support for right to left languages would be fantastic,feature_request,synthetic,hand_written,feature_request_44
+quick question: support for right to left languages would be fantastic,feature_request,synthetic,hand_written,feature_request_44
+support for right to left languages would be fantastic please,feature_request,synthetic,hand_written,feature_request_44
+"hello, support for right to left languages would be fantastic can you help",feature_request,synthetic,hand_written,feature_request_44
+i would like a mini map for large diagrams,feature_request,synthetic,hand_written,feature_request_45
+quick question: i would like a mini map for large diagrams,feature_request,synthetic,hand_written,feature_request_45
+i would like a mini map for large diagrams thank you,feature_request,synthetic,hand_written,feature_request_45
+"excuse me, i would like a mini map for large diagrams please",feature_request,synthetic,hand_written,feature_request_45
+could the app remember my last used filters,feature_request,synthetic,hand_written,feature_request_46
+"good morning, could the app remember my last used filters",feature_request,synthetic,hand_written,feature_request_46
+could the app remember my last used filters thank you,feature_request,synthetic,hand_written,feature_request_46
+quick question: could the app remember my last used filters can you help,feature_request,synthetic,hand_written,feature_request_46
+add tags with colours so we can organise items,feature_request,synthetic,hand_written,feature_request_47
+"hi, add tags with colours so we can organise items",feature_request,synthetic,hand_written,feature_request_47
+add tags with colours so we can organise items asap,feature_request,synthetic,hand_written,feature_request_47
+"hey, add tags with colours so we can organise items can you help",feature_request,synthetic,hand_written,feature_request_47
+it would be handy to have a quick add shortcut on the home screen,feature_request,synthetic,hand_written,feature_request_48
+"good morning, it would be handy to have a quick add shortcut on the home screen",feature_request,synthetic,hand_written,feature_request_48
+it would be handy to have a quick add shortcut on the home screen can you help,feature_request,synthetic,hand_written,feature_request_48
+"please help, it would be handy to have a quick add shortcut on the home screen any idea",feature_request,synthetic,hand_written,feature_request_48
+allow us to restrict who can export data,feature_request,synthetic,hand_written,feature_request_49
+"excuse me, allow us to restrict who can export data",feature_request,synthetic,hand_written,feature_request_49
+allow us to restrict who can export data thank you,feature_request,synthetic,hand_written,feature_request_49
+"good morning, allow us to restrict who can export data thank you",feature_request,synthetic,hand_written,feature_request_49
+an in app chat between teammates would be great,feature_request,synthetic,hand_written,feature_request_50
+"hello, an in app chat between teammates would be great",feature_request,synthetic,hand_written,feature_request_50
+an in app chat between teammates would be great can you help,feature_request,synthetic,hand_written,feature_request_50
+"hello, an in app chat between teammates would be great asap",feature_request,synthetic,hand_written,feature_request_50
+can the mobile app have a widget for the home screen,feature_request,synthetic,hand_written,feature_request_51
+quick question: can the mobile app have a widget for the home screen,feature_request,synthetic,hand_written,feature_request_51
+can the mobile app have a widget for the home screen can you help,feature_request,synthetic,hand_written,feature_request_51
+"hi, can the mobile app have a widget for the home screen can you help",feature_request,synthetic,hand_written,feature_request_51
+please add support for custom domains on shared pages,feature_request,synthetic,hand_written,feature_request_52
+"hey, please add support for custom domains on shared pages",feature_request,synthetic,hand_written,feature_request_52
+please add support for custom domains on shared pages any idea,feature_request,synthetic,hand_written,feature_request_52
+"excuse me, please add support for custom domains on shared pages can you help",feature_request,synthetic,hand_written,feature_request_52
+i would like to see a gantt chart of the project timeline,feature_request,synthetic,hand_written,feature_request_53
+"excuse me, i would like to see a gantt chart of the project timeline",feature_request,synthetic,hand_written,feature_request_53
+i would like to see a gantt chart of the project timeline thanks,feature_request,synthetic,hand_written,feature_request_53
+"good morning, i would like to see a gantt chart of the project timeline can you help",feature_request,synthetic,hand_written,feature_request_53
+a way to archive projects instead of deleting them would be nice,feature_request,synthetic,hand_written,feature_request_54
+"hello, a way to archive projects instead of deleting them would be nice",feature_request,synthetic,hand_written,feature_request_54
+a way to archive projects instead of deleting them would be nice thank you,feature_request,synthetic,hand_written,feature_request_54
+"please help, a way to archive projects instead of deleting them would be nice please",feature_request,synthetic,hand_written,feature_request_54
+could you add a duplicate record detector,feature_request,synthetic,hand_written,feature_request_55
+quick question: could you add a duplicate record detector,feature_request,synthetic,hand_written,feature_request_55
+could you add a duplicate record detector thank you,feature_request,synthetic,hand_written,feature_request_55
+"please help, could you add a duplicate record detector any idea",feature_request,synthetic,hand_written,feature_request_55
+we need more granular notification settings,feature_request,synthetic,hand_written,feature_request_56
+"hi, we need more granular notification settings",feature_request,synthetic,hand_written,feature_request_56
+we need more granular notification settings please,feature_request,synthetic,hand_written,feature_request_56
+"excuse me, we need more granular notification settings can you help",feature_request,synthetic,hand_written,feature_request_56
+please include a table view next to the list view,feature_request,synthetic,hand_written,feature_request_57
+"hello, please include a table view next to the list view",feature_request,synthetic,hand_written,feature_request_57
+please include a table view next to the list view can you help,feature_request,synthetic,hand_written,feature_request_57
+"hello, please include a table view next to the list view please",feature_request,synthetic,hand_written,feature_request_57
+it would be better if the api supported batch requests,feature_request,synthetic,hand_written,feature_request_58
+"hey, it would be better if the api supported batch requests",feature_request,synthetic,hand_written,feature_request_58
+it would be better if the api supported batch requests can you help,feature_request,synthetic,hand_written,feature_request_58
+"hey, it would be better if the api supported batch requests thanks",feature_request,synthetic,hand_written,feature_request_58
+how about adding goals and okr tracking,feature_request,synthetic,hand_written,feature_request_59
+quick question: how about adding goals and okr tracking,feature_request,synthetic,hand_written,feature_request_59
+how about adding goals and okr tracking asap,feature_request,synthetic,hand_written,feature_request_59
+"hey, how about adding goals and okr tracking can you help",feature_request,synthetic,hand_written,feature_request_59
+i wish i could resize the columns in the table,feature_request,synthetic,hand_written,feature_request_60
+"hey, i wish i could resize the columns in the table",feature_request,synthetic,hand_written,feature_request_60
+i wish i could resize the columns in the table can you help,feature_request,synthetic,hand_written,feature_request_60
+"hey, i wish i could resize the columns in the table please",feature_request,synthetic,hand_written,feature_request_60
+would it be possible to add a focus mode that hides distractions,feature_request,synthetic,hand_written,feature_request_61
+quick question: would it be possible to add a focus mode that hides distractions,feature_request,synthetic,hand_written,feature_request_61
+would it be possible to add a focus mode that hides distractions please,feature_request,synthetic,hand_written,feature_request_61
+"excuse me, would it be possible to add a focus mode that hides distractions thank you",feature_request,synthetic,hand_written,feature_request_61
+let us bookmark specific reports,feature_request,synthetic,hand_written,feature_request_62
+"hi, let us bookmark specific reports",feature_request,synthetic,hand_written,feature_request_62
+let us bookmark specific reports asap,feature_request,synthetic,hand_written,feature_request_62
+"hello, let us bookmark specific reports any idea",feature_request,synthetic,hand_written,feature_request_62
+can you add support for importing from trello,feature_request,synthetic,hand_written,feature_request_63
+"hi, can you add support for importing from trello",feature_request,synthetic,hand_written,feature_request_63
+can you add support for importing from trello any idea,feature_request,synthetic,hand_written,feature_request_63
+"hi, can you add support for importing from trello please",feature_request,synthetic,hand_written,feature_request_63
+please provide a sandbox environment for testing,feature_request,synthetic,hand_written,feature_request_64
+"hello, please provide a sandbox environment for testing",feature_request,synthetic,hand_written,feature_request_64
+please provide a sandbox environment for testing thanks,feature_request,synthetic,hand_written,feature_request_64
+"good morning, please provide a sandbox environment for testing please",feature_request,synthetic,hand_written,feature_request_64
+we would love a cohort analysis report,feature_request,synthetic,hand_written,feature_request_65
+"please help, we would love a cohort analysis report",feature_request,synthetic,hand_written,feature_request_65
+we would love a cohort analysis report thanks,feature_request,synthetic,hand_written,feature_request_65
+"hello, we would love a cohort analysis report thanks",feature_request,synthetic,hand_written,feature_request_65
+an option for automatic dark mode at night would be appreciated,feature_request,synthetic,hand_written,feature_request_66
+quick question: an option for automatic dark mode at night would be appreciated,feature_request,synthetic,hand_written,feature_request_66
+an option for automatic dark mode at night would be appreciated any idea,feature_request,synthetic,hand_written,feature_request_66
+"hi, an option for automatic dark mode at night would be appreciated thank you",feature_request,synthetic,hand_written,feature_request_66
+add a feature to translate comments automatically,feature_request,synthetic,hand_written,feature_request_67
+"hello, add a feature to translate comments automatically",feature_request,synthetic,hand_written,feature_request_67
+add a feature to translate comments automatically can you help,feature_request,synthetic,hand_written,feature_request_67
+"excuse me, add a feature to translate comments automatically asap",feature_request,synthetic,hand_written,feature_request_67
+we need the ability to lock a record from further edits,feature_request,synthetic,hand_written,feature_request_68
+"good morning, we need the ability to lock a record from further edits",feature_request,synthetic,hand_written,feature_request_68
+we need the ability to lock a record from further edits asap,feature_request,synthetic,hand_written,feature_request_68
+"hello, we need the ability to lock a record from further edits thank you",feature_request,synthetic,hand_written,feature_request_68
+please add auto assign rules for incoming requests,feature_request,synthetic,hand_written,feature_request_69
+"please help, please add auto assign rules for incoming requests",feature_request,synthetic,hand_written,feature_request_69
+please add auto assign rules for incoming requests any idea,feature_request,synthetic,hand_written,feature_request_69
+"excuse me, please add auto assign rules for incoming requests please",feature_request,synthetic,hand_written,feature_request_69
+hello,general,synthetic,hand_written,general_0
+"good morning, hello",general,synthetic,hand_written,general_0
+hello thanks,general,synthetic,hand_written,general_0
+"hey, hello please",general,synthetic,hand_written,general_0
+hi there,general,synthetic,hand_written,general_1
+"please help, hi there",general,synthetic,hand_written,general_1
+hi there please,general,synthetic,hand_written,general_1
+"hey, hi there thank you",general,synthetic,hand_written,general_1
+good evening,general,synthetic,hand_written,general_2
+"excuse me, good evening",general,synthetic,hand_written,general_2
+good evening can you help,general,synthetic,hand_written,general_2
+quick question: good evening any idea,general,synthetic,hand_written,general_2
+thank you so much,general,synthetic,hand_written,general_3
+"hello, thank you so much",general,synthetic,hand_written,general_3
+thank you so much please,general,synthetic,hand_written,general_3
+"please help, thank you so much any idea",general,synthetic,hand_written,general_3
+thanks for your help,general,synthetic,hand_written,general_4
+"good morning, thanks for your help",general,synthetic,hand_written,general_4
+thanks for your help any idea,general,synthetic,hand_written,general_4
+"hello, thanks for your help please",general,synthetic,hand_written,general_4
+goodbye,general,synthetic,hand_written,general_5
+"excuse me, goodbye",general,synthetic,hand_written,general_5
+goodbye asap,general,synthetic,hand_written,general_5
+"good morning, goodbye any idea",general,synthetic,hand_written,general_5
+that is all for now,general,synthetic,hand_written,general_6
+"please help, that is all for now",general,synthetic,hand_written,general_6
+that is all for now please,general,synthetic,hand_written,general_6
+"good morning, that is all for now thank you",general,synthetic,hand_written,general_6
+what can you help me with,general,synthetic,hand_written,general_7
+"good morning, what can you help me with",general,synthetic,hand_written,general_7
+what can you help me with please,general,synthetic,hand_written,general_7
+"hey, what can you help me with thank you",general,synthetic,hand_written,general_7
+are you a human or a chatbot,general,synthetic,hand_written,general_8
+quick question: are you a human or a chatbot,general,synthetic,hand_written,general_8
+are you a human or a chatbot any idea,general,synthetic,hand_written,general_8
+"hey, are you a human or a chatbot please",general,synthetic,hand_written,general_8
+who built you,general,synthetic,hand_written,general_9
+"please help, who built you",general,synthetic,hand_written,general_9
+who built you any idea,general,synthetic,hand_written,general_9
+"hey, who built you please",general,synthetic,hand_written,general_9
+what are your support hours,general,synthetic,hand_written,general_10
+"good morning, what are your support hours",general,synthetic,hand_written,general_10
+what are your support hours can you help,general,synthetic,hand_written,general_10
+"good morning, what are your support hours can you help",general,synthetic,hand_written,general_10
+how do i contact a real person,general,synthetic,hand_written,general_11
+"hi, how do i contact a real person",general,synthetic,hand_written,general_11
+how do i contact a real person can you help,general,synthetic,hand_written,general_11
+"hey, how do i contact a real person any idea",general,synthetic,hand_written,general_11
+what does your company do,general,synthetic,hand_written,general_12
+"good morning, what does your company do",general,synthetic,hand_written,general_12
+what does your company do can you help,general,synthetic,hand_written,general_12
+"excuse me, what does your company do thanks",general,synthetic,hand_written,general_12
+where is your head office,general,synthetic,hand_written,general_13
+quick question: where is your head office,general,synthetic,hand_written,general_13
+where is your head office thanks,general,synthetic,hand_written,general_13
+"excuse me, where is your head office thank you",general,synthetic,hand_written,general_13
+do you offer a free trial,general,synthetic,hand_written,general_14
+"excuse me, do you offer a free trial",general,synthetic,hand_written,general_14
+do you offer a free trial asap,general,synthetic,hand_written,general_14
+"please help, do you offer a free trial thank you",general,synthetic,hand_written,general_14
+what is the difference between the starter and pro plans,general,synthetic,hand_written,general_15
+"good morning, what is the difference between the starter and pro plans",general,synthetic,hand_written,general_15
+what is the difference between the starter and pro plans can you help,general,synthetic,hand_written,general_15
+quick question: what is the difference between the starter and pro plans can you help,general,synthetic,hand_written,general_15
+is my data stored in europe,general,synthetic,hand_written,general_16
+"good morning, is my data stored in europe",general,synthetic,hand_written,general_16
+is my data stored in europe any idea,general,synthetic,hand_written,general_16
+"please help, is my data stored in europe asap",general,synthetic,hand_written,general_16
+do you have a security certification,general,synthetic,hand_written,general_17
+"hey, do you have a security certification",general,synthetic,hand_written,general_17
+do you have a security certification thanks,general,synthetic,hand_written,general_17
+"good morning, do you have a security certification please",general,synthetic,hand_written,general_17
+how do i get started with the product,general,synthetic,hand_written,general_18
+"hey, how do i get started with the product",general,synthetic,hand_written,general_18
+how do i get started with the product can you help,general,synthetic,hand_written,general_18
+"hello, how do i get started with the product can you help",general,synthetic,hand_written,general_18
+where can i find your documentation,general,synthetic,hand_written,general_19
+"please help, where can i find your documentation",general,synthetic,hand_written,general_19
+where can i find your documentation thank you,general,synthetic,hand_written,general_19
+"excuse me, where can i find your documentation can you help",general,synthetic,hand_written,general_19
+do you have a public status page,general,synthetic,hand_written,general_20
+"hey, do you have a public status page",general,synthetic,hand_written,general_20
+do you have a public status page please,general,synthetic,hand_written,general_20
+quick question: do you have a public status page asap,general,synthetic,hand_written,general_20
+which languages does the product support,general,synthetic,hand_written,general_21
+"hello, which languages does the product support",general,synthetic,hand_written,general_21
+which languages does the product support can you help,general,synthetic,hand_written,general_21
+"hello, which languages does the product support asap",general,synthetic,hand_written,general_21
+is there an onboarding webinar for new customers,general,synthetic,hand_written,general_22
+"good morning, is there an onboarding webinar for new customers",general,synthetic,hand_written,general_22
+is there an onboarding webinar for new customers asap,general,synthetic,hand_written,general_22
+"hey, is there an onboarding webinar for new customers asap",general,synthetic,hand_written,general_22
+how do i delete my account,general,synthetic,hand_written,general_23
+"please help, how do i delete my account",general,synthetic,hand_written,general_23
+how do i delete my account any idea,general,synthetic,hand_written,general_23
+"hey, how do i delete my account thank you",general,synthetic,hand_written,general_23
+can i use the product for a school project,general,synthetic,hand_written,general_24
+"hi, can i use the product for a school project",general,synthetic,hand_written,general_24
+can i use the product for a school project thank you,general,synthetic,hand_written,general_24
+"hello, can i use the product for a school project please",general,synthetic,hand_written,general_24
+do you have a partner programme,general,synthetic,hand_written,general_25
+"hello, do you have a partner programme",general,synthetic,hand_written,general_25
+do you have a partner programme any idea,general,synthetic,hand_written,general_25
+quick question: do you have a partner programme can you help,general,synthetic,hand_written,general_25
+how many people work at your company,general,synthetic,hand_written,general_26
+"please help, how many people work at your company",general,synthetic,hand_written,general_26
+how many people work at your company thanks,general,synthetic,hand_written,general_26
+"excuse me, how many people work at your company can you help",general,synthetic,hand_written,general_26
+where can i read your privacy policy,general,synthetic,hand_written,general_27
+"excuse me, where can i read your privacy policy",general,synthetic,hand_written,general_27
+where can i read your privacy policy any idea,general,synthetic,hand_written,general_27
+quick question: where can i read your privacy policy can you help,general,synthetic,hand_written,general_27
+do you have a community forum,general,synthetic,hand_written,general_28
+"good morning, do you have a community forum",general,synthetic,hand_written,general_28
+do you have a community forum please,general,synthetic,hand_written,general_28
+"hi, do you have a community forum asap",general,synthetic,hand_written,general_28
+is your service gdpr compliant,general,synthetic,hand_written,general_29
+"hello, is your service gdpr compliant",general,synthetic,hand_written,general_29
+is your service gdpr compliant can you help,general,synthetic,hand_written,general_29
+"excuse me, is your service gdpr compliant thanks",general,synthetic,hand_written,general_29
+what is your name,general,synthetic,hand_written,general_30
+"hey, what is your name",general,synthetic,hand_written,general_30
+what is your name any idea,general,synthetic,hand_written,general_30
+"please help, what is your name asap",general,synthetic,hand_written,general_30
+can you tell me a bit about yourself,general,synthetic,hand_written,general_31
+quick question: can you tell me a bit about yourself,general,synthetic,hand_written,general_31
+can you tell me a bit about yourself thank you,general,synthetic,hand_written,general_31
+"please help, can you tell me a bit about yourself asap",general,synthetic,hand_written,general_31
+how long has your company been around,general,synthetic,hand_written,general_32
+quick question: how long has your company been around,general,synthetic,hand_written,general_32
+how long has your company been around any idea,general,synthetic,hand_written,general_32
+"please help, how long has your company been around asap",general,synthetic,hand_written,general_32
+do you offer training for large teams,general,synthetic,hand_written,general_33
+"hey, do you offer training for large teams",general,synthetic,hand_written,general_33
+do you offer training for large teams any idea,general,synthetic,hand_written,general_33
+quick question: do you offer training for large teams asap,general,synthetic,hand_written,general_33
+is there a user conference this year,general,synthetic,hand_written,general_34
+"hey, is there a user conference this year",general,synthetic,hand_written,general_34
+is there a user conference this year asap,general,synthetic,hand_written,general_34
+"hello, is there a user conference this year please",general,synthetic,hand_written,general_34
+what browsers do you support,general,synthetic,hand_written,general_35
+"excuse me, what browsers do you support",general,synthetic,hand_written,general_35
+what browsers do you support thanks,general,synthetic,hand_written,general_35
+"hey, what browsers do you support please",general,synthetic,hand_written,general_35
+can i speak to someone in my language,general,synthetic,hand_written,general_36
+"excuse me, can i speak to someone in my language",general,synthetic,hand_written,general_36
+can i speak to someone in my language thank you,general,synthetic,hand_written,general_36
+"good morning, can i speak to someone in my language any idea",general,synthetic,hand_written,general_36
+do you have an affiliate programme,general,synthetic,hand_written,general_37
+"hello, do you have an affiliate programme",general,synthetic,hand_written,general_37
+do you have an affiliate programme thanks,general,synthetic,hand_written,general_37
+"hello, do you have an affiliate programme any idea",general,synthetic,hand_written,general_37
+how do i give feedback about your service,general,synthetic,hand_written,general_38
+quick question: how do i give feedback about your service,general,synthetic,hand_written,general_38
+how do i give feedback about your service asap,general,synthetic,hand_written,general_38
+"excuse me, how do i give feedback about your service thank you",general,synthetic,hand_written,general_38
+is there a limit on the number of projects,general,synthetic,hand_written,general_39
+"good morning, is there a limit on the number of projects",general,synthetic,hand_written,general_39
+is there a limit on the number of projects thank you,general,synthetic,hand_written,general_39
+"please help, is there a limit on the number of projects asap",general,synthetic,hand_written,general_39
+who is the ceo of your company,general,synthetic,hand_written,general_40
+"hi, who is the ceo of your company",general,synthetic,hand_written,general_40
+who is the ceo of your company thanks,general,synthetic,hand_written,general_40
+"hey, who is the ceo of your company thanks",general,synthetic,hand_written,general_40
+can i try the product without a credit card,general,synthetic,hand_written,general_41
+"hey, can i try the product without a credit card",general,synthetic,hand_written,general_41
+can i try the product without a credit card thanks,general,synthetic,hand_written,general_41
+"hey, can i try the product without a credit card please",general,synthetic,hand_written,general_41
+where can i find tutorials and videos,general,synthetic,hand_written,general_42
+"excuse me, where can i find tutorials and videos",general,synthetic,hand_written,general_42
+where can i find tutorials and videos thank you,general,synthetic,hand_written,general_42
+"hello, where can i find tutorials and videos asap",general,synthetic,hand_written,general_42
+okay thanks i understand now,general,synthetic,hand_written,general_43
+"hi, okay thanks i understand now",general,synthetic,hand_written,general_43
+okay thanks i understand now please,general,synthetic,hand_written,general_43
+"please help, okay thanks i understand now asap",general,synthetic,hand_written,general_43
+never mind forget it,general,synthetic,hand_written,general_44
+"excuse me, never mind forget it",general,synthetic,hand_written,general_44
+never mind forget it thanks,general,synthetic,hand_written,general_44
+"excuse me, never mind forget it can you help",general,synthetic,hand_written,general_44
+can you repeat that,general,synthetic,hand_written,general_45
+"hi, can you repeat that",general,synthetic,hand_written,general_45
+can you repeat that please,general,synthetic,hand_written,general_45
+"please help, can you repeat that asap",general,synthetic,hand_written,general_45
+do you offer on premise installation,general,synthetic,hand_written,general_46
+quick question: do you offer on premise installation,general,synthetic,hand_written,general_46
+do you offer on premise installation can you help,general,synthetic,hand_written,general_46
+quick question: do you offer on premise installation asap,general,synthetic,hand_written,general_46
+what is the best plan for a small startup,general,synthetic,hand_written,general_47
+"hello, what is the best plan for a small startup",general,synthetic,hand_written,general_47
+what is the best plan for a small startup please,general,synthetic,hand_written,general_47
+"hey, what is the best plan for a small startup can you help",general,synthetic,hand_written,general_47
+how do i change the language of my account,general,synthetic,hand_written,general_48
+"hi, how do i change the language of my account",general,synthetic,hand_written,general_48
+how do i change the language of my account please,general,synthetic,hand_written,general_48
+quick question: how do i change the language of my account can you help,general,synthetic,hand_written,general_48
+do you have customer case studies,general,synthetic,hand_written,general_49
+"hi, do you have customer case studies",general,synthetic,hand_written,general_49
+do you have customer case studies thank you,general,synthetic,hand_written,general_49
+"excuse me, do you have customer case studies any idea",general,synthetic,hand_written,general_49
+are you available on weekends,general,synthetic,hand_written,general_50
+"hi, are you available on weekends",general,synthetic,hand_written,general_50
+are you available on weekends thanks,general,synthetic,hand_written,general_50
+"hello, are you available on weekends thank you",general,synthetic,hand_written,general_50
+is there a mobile version of the product,general,synthetic,hand_written,general_51
+"hey, is there a mobile version of the product",general,synthetic,hand_written,general_51
+is there a mobile version of the product please,general,synthetic,hand_written,general_51
+"hello, is there a mobile version of the product please",general,synthetic,hand_written,general_51
+what happens to my data if i leave,general,synthetic,hand_written,general_52
+"please help, what happens to my data if i leave",general,synthetic,hand_written,general_52
+what happens to my data if i leave can you help,general,synthetic,hand_written,general_52
+"please help, what happens to my data if i leave thank you",general,synthetic,hand_written,general_52
+how can i become a reseller,general,synthetic,hand_written,general_53
+"good morning, how can i become a reseller",general,synthetic,hand_written,general_53
+how can i become a reseller thank you,general,synthetic,hand_written,general_53
+"hello, how can i become a reseller thank you",general,synthetic,hand_written,general_53
+what is the maximum number of users on a team,general,synthetic,hand_written,general_54
+quick question: what is the maximum number of users on a team,general,synthetic,hand_written,general_54
+what is the maximum number of users on a team can you help,general,synthetic,hand_written,general_54
+quick question: what is the maximum number of users on a team asap,general,synthetic,hand_written,general_54
+can i get a demo of the product,general,synthetic,hand_written,general_55
+"good morning, can i get a demo of the product",general,synthetic,hand_written,general_55
+can i get a demo of the product thank you,general,synthetic,hand_written,general_55
+quick question: can i get a demo of the product asap,general,synthetic,hand_written,general_55
+do you have an api,general,synthetic,hand_written,general_56
+"please help, do you have an api",general,synthetic,hand_written,general_56
+do you have an api thank you,general,synthetic,hand_written,general_56
+"hi, do you have an api thank you",general,synthetic,hand_written,general_56
+good to know thanks,general,synthetic,hand_written,general_57
+"excuse me, good to know thanks",general,synthetic,hand_written,general_57
+good to know thanks please,general,synthetic,hand_written,general_57
+"good morning, good to know thanks thanks",general,synthetic,hand_written,general_57
+is there a way to talk to sales,general,synthetic,hand_written,general_58
+"excuse me, is there a way to talk to sales",general,synthetic,hand_written,general_58
+is there a way to talk to sales thanks,general,synthetic,hand_written,general_58
+"hey, is there a way to talk to sales any idea",general,synthetic,hand_written,general_58
+what are the system requirements,general,synthetic,hand_written,general_59
+"hi, what are the system requirements",general,synthetic,hand_written,general_59
+what are the system requirements thanks,general,synthetic,hand_written,general_59
+"hello, what are the system requirements thanks",general,synthetic,hand_written,general_59
+can you explain how your product works,general,synthetic,hand_written,general_60
+"please help, can you explain how your product works",general,synthetic,hand_written,general_60
+can you explain how your product works please,general,synthetic,hand_written,general_60
+"hello, can you explain how your product works please",general,synthetic,hand_written,general_60
+do you offer discounts for annual commitments,general,synthetic,hand_written,general_61
+quick question: do you offer discounts for annual commitments,general,synthetic,hand_written,general_61
+do you offer discounts for annual commitments can you help,general,synthetic,hand_written,general_61
+"excuse me, do you offer discounts for annual commitments thank you",general,synthetic,hand_written,general_61
+how do i find my account number,general,synthetic,hand_written,general_62
+quick question: how do i find my account number,general,synthetic,hand_written,general_62
+how do i find my account number asap,general,synthetic,hand_written,general_62
+"hi, how do i find my account number thanks",general,synthetic,hand_written,general_62
+can i invite people from outside my company,general,synthetic,hand_written,general_63
+"hey, can i invite people from outside my company",general,synthetic,hand_written,general_63
+can i invite people from outside my company any idea,general,synthetic,hand_written,general_63
+"hey, can i invite people from outside my company any idea",general,synthetic,hand_written,general_63
+do you have a newsletter,general,synthetic,hand_written,general_64
+"good morning, do you have a newsletter",general,synthetic,hand_written,general_64
+do you have a newsletter can you help,general,synthetic,hand_written,general_64
+"hi, do you have a newsletter any idea",general,synthetic,hand_written,general_64
+what time zone is your support team in,general,synthetic,hand_written,general_65
+"hello, what time zone is your support team in",general,synthetic,hand_written,general_65
+what time zone is your support team in asap,general,synthetic,hand_written,general_65
+"good morning, what time zone is your support team in any idea",general,synthetic,hand_written,general_65
+tell me something about your roadmap,general,synthetic,hand_written,general_66
+"please help, tell me something about your roadmap",general,synthetic,hand_written,general_66
+tell me something about your roadmap any idea,general,synthetic,hand_written,general_66
+"good morning, tell me something about your roadmap thanks",general,synthetic,hand_written,general_66
+just saying hi,general,synthetic,hand_written,general_67
+quick question: just saying hi,general,synthetic,hand_written,general_67
+just saying hi please,general,synthetic,hand_written,general_67
+"please help, just saying hi thanks",general,synthetic,hand_written,general_67
+who do i talk to about a partnership,general,synthetic,hand_written,general_68
+"excuse me, who do i talk to about a partnership",general,synthetic,hand_written,general_68
+who do i talk to about a partnership thanks,general,synthetic,hand_written,general_68
+"hey, who do i talk to about a partnership thanks",general,synthetic,hand_written,general_68
+do you support accessibility standards,general,synthetic,hand_written,general_69
+"hi, do you support accessibility standards",general,synthetic,hand_written,general_69
+do you support accessibility standards please,general,synthetic,hand_written,general_69
+"hello, do you support accessibility standards asap",general,synthetic,hand_written,general_69
