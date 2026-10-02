@@ -49,4 +49,4 @@ PATIENCE = 5                  # stop if val macro-F1 has not improved for this m
 GRAD_CLIP = 5.0
 HISTORY_PATH = MODELS_DIR / "training_history.json"
 CURVES_PATH = MODELS_DIR / "training_curves.png"
-WORD_DROPOUT = 0.15         # share of words randomly replaced by <unk> while training (regularisation)
+WORD_DROPOUT = 0.3          # share of words randomly replaced by <unk> while training; chosen on VALIDATION (0.0 -> 79.5%, 0.15 -> 86.1%, 0.3 -> 88.9%)
