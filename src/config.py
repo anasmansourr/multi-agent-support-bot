@@ -35,3 +35,11 @@ SEED = 42
 
 # ---- Routing ----------------------------------------------------------------
 CONFIDENCE_THRESHOLD = 0.60   # below this, route to the general agent
+
+# ---- Dataset building (Phase 3) -----------------------------------------------
+LABEL2ID = {name: i for i, name in enumerate(INTENTS)}
+ID2LABEL = {i: name for name, i in LABEL2ID.items()}
+REAL_CAP_PER_INTENT = 300     # max REAL rows kept per intent (keeps synthetic SaaS data from being drowned)
+VAL_FRAC = 0.15
+TEST_FRAC = 0.15
+MIN_FREQ = 2                  # a word must appear >= 2 times in TRAIN to get its own id
