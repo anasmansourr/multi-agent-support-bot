@@ -34,3 +34,14 @@ def test_train_saves_a_loadable_checkpoint_and_learns(tmp_path):
 
     plot_curves(history, best_epoch, tmp_path / "curves.png")
     assert (tmp_path / "curves.png").stat().st_size > 0
+
+
+def test_word_dropout_only_touches_real_words():
+    from src.classifier.train import apply_word_dropout
+    torch.manual_seed(0)
+    ids = torch.tensor([[5, 6, 7, 8, 0, 0]] * 200)
+    assert torch.equal(apply_word_dropout(ids, 0.0, unk_id=1), ids)          # off -> unchanged
+    out = apply_word_dropout(ids, 0.5, unk_id=1)
+    assert torch.all(out[:, 4:] == 0)                                         # padding never replaced
+    rate = (out[:, :4] == 1).float().mean().item()
+    assert 0.4 < rate < 0.6                                                   # about half became <unk>

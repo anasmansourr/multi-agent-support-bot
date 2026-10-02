@@ -12,6 +12,7 @@ The TEST set and the HARD TEST set are never touched here.
 """
 import argparse
 import json
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -33,7 +34,17 @@ def compute_class_weights(labels, num_classes=len(config.INTENTS)):
     return torch.tensor(len(labels) / (num_classes * np.maximum(counts, 1)), dtype=torch.float)
 
 
-def run_epoch(model, loader, loss_fn, device, optimizer=None):
+def apply_word_dropout(ids, p, unk_id, pad_id=0):
+    """Randomly replace a fraction `p` of REAL words with <unk> (never the padding).
+    Regularisation: the model cannot rely on one memorised word, and it practises on
+    unknown words, which it meets at test time (OOV rate was 13-18%)."""
+    if p <= 0:
+        return ids
+    drop = (torch.rand(ids.shape, device=ids.device) < p) & (ids != pad_id)
+    return torch.where(drop, torch.full_like(ids, unk_id), ids)
+
+
+def run_epoch(model, loader, loss_fn, device, optimizer=None, word_dropout=0.0, unk_id=1):
     """One pass over `loader`. Trains if an optimizer is given, otherwise only evaluates."""
     training = optimizer is not None
     model.train(training)
@@ -41,6 +52,8 @@ def run_epoch(model, loader, loss_fn, device, optimizer=None):
     with torch.set_grad_enabled(training):
         for ids, lengths, labels in loader:
             ids, labels = ids.to(device), labels.to(device)
+            if training:
+                ids = apply_word_dropout(ids, word_dropout, unk_id)    # training only, never at validation
             logits = model(ids, lengths)
             loss = loss_fn(logits, labels)
             if training:
@@ -70,7 +83,8 @@ def save_checkpoint(path, model, vocab, epoch, val_metrics):
 
 def train(train_df, val_df, vocab, epochs=config.EPOCHS, lr=config.LEARNING_RATE,
           batch_size=config.BATCH_SIZE, rnn_type="lstm", patience=config.PATIENCE,
-          checkpoint_path=config.CLASSIFIER_PATH, seed=config.SEED, verbose=True):
+          checkpoint_path=config.CLASSIFIER_PATH, seed=config.SEED, verbose=True,
+          word_dropout=config.WORD_DROPOUT):
     torch.manual_seed(seed)
     np.random.seed(seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -86,13 +100,15 @@ def train(train_df, val_df, vocab, epochs=config.EPOCHS, lr=config.LEARNING_RATE
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 
     if verbose:
-        print(f"Device: {device} | model: {rnn_type.upper()} | params: {count_parameters(model):,}")
+        print(f"Device: {device} | model: {rnn_type.upper()} | params: {count_parameters(model):,} "
+              f"| word dropout: {word_dropout} | seed: {seed}")
         print("Class weights:", {config.ID2LABEL[i]: round(w, 2) for i, w in enumerate(weights.tolist())})
         print(f"\n{'epoch':>5} | {'train loss':>10} {'acc':>6} | {'val loss':>8} {'acc':>6} {'macroF1':>7}")
 
     history, best_f1, best_epoch, stale = [], -1.0, 0, 0
     for epoch in range(1, epochs + 1):
-        tr = run_epoch(model, train_loader, loss_fn, device, optimizer)
+        tr = run_epoch(model, train_loader, loss_fn, device, optimizer,
+                       word_dropout=word_dropout, unk_id=vocab.unk_id)
         va = run_epoch(model, val_loader, loss_fn, device)
         history.append({"epoch": epoch, **{f"train_{k}": v for k, v in tr.items()},
                         **{f"val_{k}": v for k, v in va.items()}})
@@ -151,6 +167,9 @@ def main():
     parser.add_argument("--rnn-type", choices=["lstm", "gru"], default="lstm")
     parser.add_argument("--lr", type=float, default=config.LEARNING_RATE)
     parser.add_argument("--batch-size", type=int, default=config.BATCH_SIZE)
+    parser.add_argument("--word-dropout", type=float, default=config.WORD_DROPOUT)
+    parser.add_argument("--seed", type=int, default=config.SEED)
+    parser.add_argument("--out", default=str(config.CLASSIFIER_PATH), help="checkpoint file to write")
     args = parser.parse_args()
 
     vocab = Vocabulary.from_dict(json.loads((config.PROCESSED_DIR / "vocab.json").read_text(encoding="utf-8")))
@@ -159,11 +178,13 @@ def main():
     print(f"Train rows: {len(train_df)} | Validation rows: {len(val_df)} | Vocab: {len(vocab)}\n")
 
     history, best_epoch, best_f1 = train(train_df, val_df, vocab, epochs=args.epochs, lr=args.lr,
-                                         batch_size=args.batch_size, rnn_type=args.rnn_type)
+                                         batch_size=args.batch_size, rnn_type=args.rnn_type,
+                                         word_dropout=args.word_dropout, seed=args.seed,
+                                         checkpoint_path=Path(args.out))
     config.HISTORY_PATH.write_text(json.dumps(history, indent=2), encoding="utf-8")
     plot_curves(history, best_epoch, config.CURVES_PATH)
     print(f"\nBest epoch: {best_epoch} (val macro-F1 {best_f1:.3f})")
-    print(f"Saved checkpoint -> {config.CLASSIFIER_PATH}")
+    print(f"Saved checkpoint -> {args.out}")
     print(f"Saved history    -> {config.HISTORY_PATH}")
     print(f"Saved curves     -> {config.CURVES_PATH}")
     print("\nNote: these are VALIDATION numbers. Honest test results come in Phase 6.")
