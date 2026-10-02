@@ -222,3 +222,6 @@ data/raw/*
 !data/raw/.gitkeep
 *.faiss
 *.pkl
+
+# Experiment checkpoints
+models/wd*.pt

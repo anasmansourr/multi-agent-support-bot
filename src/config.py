@@ -58,3 +58,9 @@ GROQ_DEFAULT_MODEL = "openai/gpt-oss-20b"
 LLM_TEMPERATURE = 0.0         # 0 = most deterministic; good for tool-calling agents
 LLM_TIMEOUT_SECONDS = 30
 LLM_MAX_RETRIES = 1           # keep low: on a rate limit we want to fail over fast, not wait
+
+# ---- Ollama fallback (Phase 9) --------------------------------------------------
+# Override with OLLAMA_MODEL / OLLAMA_BASE_URL in .env. The model must support tool calling.
+OLLAMA_DEFAULT_MODEL = "llama3.2:3b"          # ~2 GB download, runs on an ordinary laptop
+OLLAMA_DEFAULT_BASE_URL = "http://localhost:11434"
+OLLAMA_TIMEOUT_SECONDS = 120                  # local CPU inference is slower than Groq
