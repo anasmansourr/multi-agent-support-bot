@@ -80,3 +80,10 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 RAG_TOP_K = 3
 RAG_MIN_SCORE = 0.20          # calibrated on real scores: off-topic questions <= 0.14, real questions >= 0.21 (python -m src.rag.retriever --calibrate)
+
+# ---- Conversation memory (Phase 14) ---------------------------------------------
+MEMORY_MAX_TURNS = 6          # most recent user+assistant turns sent to the agents
+MEMORY_MAX_CHARS = 1500       # per stored message (saves tokens on rate-limited free tiers)
+# True: a LOW-confidence message in the middle of a conversation stays with the current agent (so "yes please"
+# keeps its flow). False: strict rule everywhere - low confidence always goes to the general agent.
+FOLLOWUP_STICKY = True

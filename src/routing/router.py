@@ -44,10 +44,15 @@ class RouterResult:
     attempts: list = field(default_factory=list)
 
 
-def decide(message, predictor, threshold=None):
+def decide(message, predictor, threshold=None, active_agent=None, sticky=None):
     """Classifier -> routing decision. Defensive: bad classifier output never crashes the app,
-    it just routes to the general agent with a reason."""
+    it just routes to the general agent with a reason.
+
+    Low confidence normally means "general agent". If `sticky` (config.FOLLOWUP_STICKY) and a specialist agent
+    is already handling the conversation (`active_agent`), a low-confidence follow-up such as "yes please"
+    stays with that agent instead. A CONFIDENT classification always wins, which is how handoffs happen."""
     threshold = config.CONFIDENCE_THRESHOLD if threshold is None else threshold
+    sticky = config.FOLLOWUP_STICKY if sticky is None else sticky
     try:
         out = predictor.predict(message)
         intent, confidence = out["intent"], float(out["confidence"])
@@ -58,6 +63,9 @@ def decide(message, predictor, threshold=None):
     if intent not in config.INTENTS or math.isnan(confidence) or not 0.0 <= confidence <= 1.0:
         return RoutingDecision(str(intent), 0.0, FALLBACK_AGENT, True, "invalid_output", scores, threshold)
     if confidence < threshold:
+        if sticky and active_agent in config.INTENTS and active_agent != FALLBACK_AGENT:
+            return RoutingDecision(intent, confidence, active_agent, intent != active_agent,
+                                   "low_confidence_kept_agent", scores, threshold)
         return RoutingDecision(intent, confidence, FALLBACK_AGENT, intent != FALLBACK_AGENT,
                                "low_confidence", scores, threshold)
     return RoutingDecision(intent, confidence, intent, False, "ok", scores, threshold)
@@ -76,7 +84,7 @@ def build_chain(predictor):
     Output dict: {"routing": RoutingDecision, "agent": AgentResult}."""
     # Classify unless the caller already did (Router.handle does, so it can still report the routing if the LLM fails).
     classify = RunnableLambda(lambda s: s if "routing" in s
-                              else {**s, "routing": decide(s["input"], predictor, s.get("threshold"))})
+                              else {**s, "routing": decide(s["input"], predictor, s.get("threshold"), s.get("active_agent"))})
     branches = [(lambda s, i=intent: s["routing"].selected_agent == i, RunnableLambda(partial(_run, intent)))
                 for intent in config.INTENTS if intent != FALLBACK_AGENT]
     branch = RunnableBranch(*branches, RunnableLambda(partial(_run, FALLBACK_AGENT)))
@@ -96,8 +104,8 @@ class Router:
         return decide(message, self.predictor, threshold)
 
     def handle(self, message, chat_history=None, customer_id=config.DEFAULT_CUSTOMER_ID, threshold=None,
-               providers=None, simulate_outage=()):
-        routing = decide(message, self.predictor, threshold)          # the classifier runs exactly once per message
+               providers=None, simulate_outage=(), active_agent=None):
+        routing = decide(message, self.predictor, threshold, active_agent)    # the classifier runs exactly once per message
         state = {"input": message, "chat_history": list(chat_history or []), "customer_id": customer_id,
                  "routing": routing, "providers": providers, "simulate_outage": simulate_outage}
         try:
