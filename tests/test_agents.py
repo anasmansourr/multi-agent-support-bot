@@ -143,4 +143,4 @@ def test_prompts_keep_conversations_self_contained_and_hide_internals():
     assert "Finish the job in one reply" in COMMON_RULES
     feature = build_system_prompt("feature_request", ["check_roadmap", "log_feature_request"])
     assert "IMMEDIATELY in this same turn" in feature and "Do NOT log a new request" in feature
-    assert "Never offer updates" in COMMON_RULES
+    assert "Never offer updates" in COMMON_RULES and "keep you posted" in COMMON_RULES
