@@ -1,4 +1,5 @@
 import re
+import zlib
 
 import numpy as np
 import pytest
@@ -25,7 +26,7 @@ class FakeEmbeddings(Embeddings):
         v = np.zeros(self.DIM)
         for w in re.findall(r"[a-z0-9]+", text.lower()):
             if len(w) > 2 and w not in STOP:
-                v[hash(w) % self.DIM] += 1.0
+                v[zlib.crc32(w.encode()) % self.DIM] += 1.0     # stable across runs (built-in hash() is randomized)
         return v.tolist()
 
     def embed_documents(self, texts):
