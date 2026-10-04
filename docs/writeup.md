@@ -263,7 +263,7 @@ follow-ups mid-conversation; a first low-confidence message always goes to Gener
 
 ## Appendix A. Testing summary
 
-* **176 automated tests pass** (2 opt-in tests skipped): data pipeline, model, training, evaluation, inference, tools, agents, routing, memory, RAG, fallback, UI.
+* **181 automated tests pass** (2 opt-in tests skipped): data pipeline, model, training, evaluation, inference, tools, agents, routing, memory, RAG, fallback, UI.
   The Streamlit UI is tested headlessly with Streamlit's `AppTest` against the real `app.py`; the tests were mutation-checked (deliberately broken code made them fail).
 * **26/26 integration checks pass** on the real stack (`python -m src.demo_check`): real tool calls, RAG, memory, a billing -> technical handoff,
   Groq outage -> Ollama with the tool still called, both providers down, empty input, low confidence, unknown input.

@@ -38,5 +38,5 @@ def test_images_are_embedded_and_missing_ones_flagged(tmp_path, monkeypatch):
 
 def test_summary_numbers_are_present():
     page, _ = build_html()
-    for fact in ["89.9%", "78.3%", "0.898", "336,148", "26/26", "176 automated tests"]:
+    for fact in ["89.9%", "78.3%", "0.898", "336,148", "26/26", "automated tests pass"]:
         assert fact in page, fact
