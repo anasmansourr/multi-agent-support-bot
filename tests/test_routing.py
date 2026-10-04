@@ -77,7 +77,7 @@ def test_chain_runs_the_agent_chosen_by_the_classifier_and_no_other():
                                     "providers": [provider(model)]})
     assert out["routing"].selected_agent == "technical" and out["agent"].intent == "technical"
     assert "Technical Support Agent" in system_text(model)
-    assert set(model.seen_tool_names) == {"check_service_status"}
+    assert set(model.seen_tool_names) == {"check_service_status", "search_docs"}
     assert len(model.seen) == 1                     # the LLM was called once, for the answer, NOT to classify
 
 

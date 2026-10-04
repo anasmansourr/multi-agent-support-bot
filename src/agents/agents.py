@@ -7,7 +7,6 @@ Try it:   python -m src.agents.agents --intent billing "It says I owe 500"
 from dataclasses import dataclass, field
 
 from langchain.agents import AgentExecutor, create_tool_calling_agent
-from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 from src import config
@@ -27,17 +26,6 @@ class AgentResult:
     attempts: list = field(default_factory=list)  # failed providers before the one that answered
 
 
-class _NoToolAgent:
-    """Used only when an agent has no tools (the General agent until search_docs arrives in Phase 13):
-    an empty tool list cannot be bound to the model, so run prompt -> LLM directly with the same output shape."""
-
-    def __init__(self, prompt, llm):
-        self._chain = prompt.partial(agent_scratchpad=[]) | llm | StrOutputParser()
-
-    def invoke(self, inputs):
-        return {"output": self._chain.invoke(inputs), "intermediate_steps": []}
-
-
 def build_agent(intent, llm):
     """Build the executor for one intent. Each agent gets ONLY its own tools and its own prompt."""
     tools = TOOLS_BY_AGENT[intent]
@@ -48,8 +36,6 @@ def build_agent(intent, llm):
         ("human", "{input}"),
         MessagesPlaceholder("agent_scratchpad"),
     ])
-    if not tools:
-        return _NoToolAgent(prompt, llm)
     agent = create_tool_calling_agent(llm, tools, prompt)
     return AgentExecutor(agent=agent, tools=tools, max_iterations=config.AGENT_MAX_ITERATIONS,
                          handle_parsing_errors=True, return_intermediate_steps=True)

@@ -69,9 +69,10 @@ def test_unexpected_crash_becomes_a_safe_message(monkeypatch):
 def test_each_agent_only_has_its_own_tools():
     names = {k: {t.name for t in v} for k, v in TOOLS_BY_AGENT.items()}
     assert names["billing"] == {"check_invoice", "check_refund_eligibility"}
-    assert names["technical"] == {"check_service_status"}
-    assert names["feature_request"] == {"check_roadmap", "log_feature_request"}
-    assert names["general"] == set()
+    assert names["technical"] == {"check_service_status", "search_docs"}
+    assert names["feature_request"] == {"check_roadmap", "log_feature_request", "search_docs"}
+    assert names["general"] == {"search_docs"}
+    assert "search_docs" not in names["billing"]            # billing works from account data only
     assert set(config.INTENTS) == set(TOOLS_BY_AGENT)
 
 

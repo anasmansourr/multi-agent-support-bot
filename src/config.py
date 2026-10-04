@@ -72,3 +72,11 @@ FEATURE_REQUESTS_PATH = DATA_DIR / "feature_requests.jsonl"   # written by log_f
 PRODUCT_NAME = "FlowDesk"                 # fictional project-management SaaS used for the demo
 DEFAULT_CUSTOMER_ID = "demo_customer"     # the "signed-in" customer in the demo (mock data)
 AGENT_MAX_ITERATIONS = 5                  # safety cap on tool-calling loops
+
+# ---- RAG (Phase 13) ------------------------------------------------------------
+VECTORSTORE_DIR = DATA_DIR / "vectorstore"           # FAISS index, rebuilt by `python -m src.rag.ingest`
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"   # local and free (downloads ~90 MB once)
+CHUNK_SIZE = 500
+CHUNK_OVERLAP = 50
+RAG_TOP_K = 3
+RAG_MIN_SCORE = 0.30          # cosine similarity below this = "not relevant"; calibrate with: python -m src.rag.retriever --calibrate

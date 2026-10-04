@@ -57,8 +57,9 @@ def test_agents_have_different_prompts_and_only_their_own_tools():
 
 def test_the_model_is_only_offered_its_agents_tools():
     for intent, expected in {"billing": {"check_invoice", "check_refund_eligibility"},
-                             "technical": {"check_service_status"},
-                             "feature_request": {"check_roadmap", "log_feature_request"}}.items():
+                             "technical": {"check_service_status", "search_docs"},
+                             "feature_request": {"check_roadmap", "log_feature_request", "search_docs"},
+                             "general": {"search_docs"}}.items():
         model = ScriptedChatModel(script=[AIMessage(content="ok")])
         run_agent(intent, "hi", providers=[provider("groq", model)])
         assert set(model.seen_tool_names) == expected
@@ -73,7 +74,7 @@ def test_an_agent_cannot_use_a_tool_it_does_not_own(tmp_path, monkeypatch):
     assert not (tmp_path / "fr.jsonl").exists()                          # nothing was written
 
 
-def test_general_agent_without_tools_still_answers():
+def test_general_agent_can_answer_without_using_its_tool():
     model = ScriptedChatModel(script=[AIMessage(content="Hello! How can I help?")])
     r = run_agent("general", "hello", providers=[provider("groq", model)])
     assert r.output == "Hello! How can I help?" and r.tool_calls == []

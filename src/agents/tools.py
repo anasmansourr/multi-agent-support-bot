@@ -10,7 +10,8 @@ Rules
   * Tools never raise to the agent: expected problems return a clear message
     (found=False, ...) and unexpected ones become a ToolException that LangChain hands back
     to the model as plain text (handle_tool_error=True). The app never crashes on a tool.
-  * `search_docs` (RAG) is added in Phase 13.
+  * `search_docs` is backed by the RAG retriever (src/rag), which is NOT mock: it searches real documents
+    (fictional FlowDesk docs written for this project in data/knowledge_base/).
 """
 import functools
 import json
@@ -37,7 +38,7 @@ MOCK_CUSTOMERS = {
                   "last_payment_amount": 58.00, "last_payment_days_ago": 6, "payment_method": "Mastercard ending 1881"},
     "cust_recent": {"name": "Recent Buyer Ltd.", "plan": "Business (10 seats)", "invoice_id": "INV-2105",
                     "status": "paid", "amount_due": 0.00, "due_in_days": 28,
-                    "last_payment_amount": 490.00, "last_payment_days_ago": 9, "payment_method": "Visa ending 0007"},
+                    "last_payment_amount": 790.00, "last_payment_days_ago": 9, "payment_method": "Visa ending 0007"},
 }
 REFUND_WINDOW_DAYS = 30
 
@@ -191,19 +192,42 @@ def log_feature_request(title: str, description: str = "", customer_id: str = "a
     return {"logged": True, "ticket_id": ticket, "title": title}
 
 
+# --------------------------------------------------------------- RAG tool
+class DocsInput(BaseModel):
+    query: str = Field(description="What to look up, as a short question or keywords, e.g. 'refund window' or 'webhook retries'.")
+
+
+def search_docs(query: str) -> dict:
+    """Search the FlowDesk documentation (pricing, policies, troubleshooting, API, security, support hours,
+    company info). Returns the most relevant excerpts with their source file. Use it for any factual question
+    about the product or company, and answer ONLY from what it returns."""
+    query = str(query).strip()
+    if not query:
+        raise ToolException("Please provide something to search for.")
+    from src.rag import retriever as rag           # imported lazily: loading the embedding model is slow
+    docs = rag.get_retriever().invoke(query)
+    if not docs:
+        return {"found": False, "message": "No relevant documentation was found. The documentation does not "
+                                           "provide enough information to answer this."}
+    return {"found": True, "results": [{"source": d.metadata["source"], "score": round(d.metadata["score"], 2),
+                                        "excerpt": d.page_content} for d in docs]}
+
+
 # --------------------------------------------------------------- registry
 check_invoice_tool = _make_tool(check_invoice, CustomerInput)
 check_refund_eligibility_tool = _make_tool(check_refund_eligibility, CustomerInput)
 check_service_status_tool = _make_tool(check_service_status, ServiceInput)
 check_roadmap_tool = _make_tool(check_roadmap, RoadmapInput)
 log_feature_request_tool = _make_tool(log_feature_request, FeatureRequestInput)
+search_docs_tool = _make_tool(search_docs, DocsInput)
 
-# Each agent sees only its own tools. `search_docs` joins technical / feature_request / general in Phase 13.
+# Each agent sees only its own tools. Technical, feature-request and general can search the docs (RAG);
+# billing works from account data only.
 TOOLS_BY_AGENT = {
     "billing": [check_invoice_tool, check_refund_eligibility_tool],
-    "technical": [check_service_status_tool],
-    "feature_request": [check_roadmap_tool, log_feature_request_tool],
-    "general": [],
+    "technical": [check_service_status_tool, search_docs_tool],
+    "feature_request": [check_roadmap_tool, log_feature_request_tool, search_docs_tool],
+    "general": [search_docs_tool],
 }
 
 
