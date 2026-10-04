@@ -98,7 +98,7 @@ def test_failure_shows_a_friendly_message_never_a_traceback(app):
     assert "try again" in app.chat_message[1].markdown[0].value.lower()
     assert any("try again" in e.value.lower() for e in app.sidebar.error)
     assert not app.exception
-    assert "Errors: **1**" in sidebar_text(app)
+    assert "Errors **1**" in sidebar_text(app)
 
 
 def test_usage_counter(app):
@@ -107,8 +107,8 @@ def test_usage_counter(app):
     send(app, "It says I owe 500")
     send(app, "boom")
     text = sidebar_text(app)
-    assert "Messages: **3**" in text and "Groq answers: **1**" in text and "Ollama answers: **1**" in text
-    assert "Fallbacks: **1**" in text and "Tool calls: **2**" in text and "Errors: **1**" in text
+    assert "Messages **3**" in text and "Groq **1**" in text and "Ollama **1**" in text
+    assert "Fallbacks **1**" in text and "Tool calls **2**" in text and "Errors **1**" in text
 
 
 def test_reset_clears_chat_sidebar_and_memory(app):
@@ -116,7 +116,7 @@ def test_reset_clears_chat_sidebar_and_memory(app):
     reset = next(b for b in app.sidebar.button if b.label == "Reset conversation")
     reset.click().run()
     assert len(app.chat_message) == 0 and "Send a message" in sidebar_text(app)
-    assert app.session_state["bot"].resets == 1 and "Messages: **0**" in sidebar_text(app)
+    assert app.session_state["bot"].resets == 1 and "Messages **0**" in sidebar_text(app)
 
 
 def test_demo_button_sends_its_message(app):

@@ -169,6 +169,5 @@ with route_box:
     st.divider()
     st.subheader("Usage (this session)")
     u = ss.usage
-    st.markdown(f"Messages: **{u['messages']}**  \nGroq answers: **{u['groq']}**  \n"
-                f"Ollama answers: **{u['ollama']}**  \nFallbacks: **{u['fallbacks']}**  \n"
-                f"Tool calls: **{u['tool_calls']}**  \nErrors: **{u['errors']}**")
+    st.markdown(f"Messages **{u['messages']}** · Groq **{u['groq']}** · Ollama **{u['ollama']}**  \n"
+                f"Fallbacks **{u['fallbacks']}** · Tool calls **{u['tool_calls']}** · Errors **{u['errors']}**")
