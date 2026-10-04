@@ -123,3 +123,11 @@ def test_both_providers_failing_raises_a_safe_error():
 def test_build_agent_returns_an_agent_executor_for_tool_agents():
     from langchain.agents import AgentExecutor
     assert isinstance(build_agent("billing", ScriptedChatModel(script=[])), AgentExecutor)
+
+
+def test_prompts_forbid_inventing_details_and_claiming_unbacked_actions():
+    from src.agents.prompts import COMMON_RULES
+    assert "menu names" in COMMON_RULES and "Never claim you did something" in COMMON_RULES
+    technical = build_system_prompt("technical", ["check_service_status"])
+    assert "ONLY come from documentation" in technical
+    assert "forwarded or submitted" in build_system_prompt("billing", [])
