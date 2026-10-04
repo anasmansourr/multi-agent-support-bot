@@ -16,6 +16,7 @@ Rules
 import functools
 import json
 import logging
+import re
 from datetime import date, timedelta
 
 from langchain_core.tools import StructuredTool, ToolException
@@ -204,6 +205,10 @@ def search_docs(query: str) -> dict:
     query = str(query).strip()
     if not query:
         raise ToolException("Please provide something to search for.")
+    # "FlowDesk" appears in every document, so it only pulls generic pages (measured: it pushed the integrations
+    # page out of the top 5). Remove it in code instead of hoping the LLM omits it.
+    query = re.sub(r"\bflow\s?desk\b", " ", query, flags=re.IGNORECASE)
+    query = " ".join(query.split()) or str(query).strip()
     from src.rag import retriever as rag           # imported lazily: loading the embedding model is slow
     docs = rag.get_retriever().invoke(query)
     if not docs:

@@ -146,3 +146,16 @@ def test_technical_agent_answers_from_retrieved_documentation(patched_rag):
     second_prompt = " ".join(str(m.content) for m in model.seen[1])
     assert "1, 5, 30 minutes" in second_prompt or "after 1, 5 and 30 minutes" in second_prompt   # chunk reached the LLM
     assert "3 times" in r.output
+
+
+def test_product_name_is_stripped_from_queries_in_code(monkeypatch, docs_retriever):
+    seen = []
+
+    class Spy:
+        def invoke(self, q):
+            seen.append(q)
+            return []
+    monkeypatch.setattr(rag, "get_retriever", lambda *a, **k: Spy())
+    for raw in ["data regions FlowDesk", "FlowDesk data regions", "Flow Desk data regions", "flowdesk"]:
+        tools.search_docs_tool.invoke({"query": raw})
+    assert seen == ["data regions", "data regions", "data regions", "flowdesk"]   # a query that is ONLY the name is kept

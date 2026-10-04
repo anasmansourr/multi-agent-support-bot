@@ -130,6 +130,7 @@ def test_prompts_forbid_inventing_details_and_claiming_unbacked_actions():
     from src.agents.prompts import COMMON_RULES
     assert "menu names" in COMMON_RULES and "Never claim you did something" in COMMON_RULES
     assert "Do not suggest workarounds" in COMMON_RULES
+    assert "unless the documentation says so explicitly" in COMMON_RULES
     technical = build_system_prompt("technical", ["check_service_status"])
     assert "ONLY come from documentation" in technical
     assert "forwarded or submitted" in build_system_prompt("billing", [])
