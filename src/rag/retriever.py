@@ -73,7 +73,13 @@ ANSWERABLE = [  # (question, file that should answer it)
     ("Do you give a discount to non-profits?", "plans_and_pricing.md"),
     ("What are your support hours?", "support_and_contact.md"),
     ("Is there a cancellation fee?", "subscription_and_cancellation.md"),
-    ("Which data regions can I choose?", "account_and_security.md"),
+    ("Which data regions can I choose?", "security_and_privacy.md"),
+    ("Is there a free plan?", "plans_and_pricing.md"),
+    ("Where is your head office?", "company_info.md"),
+    ("How do I export my data?", "data_and_account_deletion.md"),
+    ("Why does my CSV import fail on row 1?", "troubleshooting_performance_and_uploads.md"),
+    ("Does the mobile app work offline?", "mobile_app.md"),
+    ("When will dark mode be available?", "feature_requests_policy.md"),
 ]
 UNANSWERABLE = [  # clearly outside the documentation
     "What is the capital of France?",
@@ -81,26 +87,49 @@ UNANSWERABLE = [  # clearly outside the documentation
     "Who won the football world cup?",
     "Explain quantum entanglement",
 ]
+IN_DOMAIN_NOT_ANSWERED = [  # sound like FlowDesk questions; (question, file that explicitly says "not available", or None)
+    ("Does FlowDesk integrate with Microsoft Teams?", "integrations.md"),
+    ("Does FlowDesk integrate with Microsoft Teams? (query without the product name: 'Microsoft Teams integration')", "integrations.md"),
+    ("Can I run FlowDesk on my own server?", None),
+]
 
 
 def calibrate():
     store = get_retriever(k=1, min_score=-1.0).store
-    def best(q):
-        doc, dist = store.similarity_search_with_score(q, k=1)[0]
-        return cosine_from_l2(dist), doc.metadata["source"]
-    print("ANSWERABLE questions (should match the expected file):")
-    good = []
+
+    def ranked(q):
+        q = q.split(" (query")[0] if "(query without" not in q else "Microsoft Teams integration"
+        return [(cosine_from_l2(d), doc.metadata["source"]) for doc, d in store.similarity_search_with_score(q, k=5)]
+
+    def rank_of(results, expected):
+        return next((i + 1 for i, (_, src) in enumerate(results) if src == expected), None)
+
+    print("ANSWERABLE questions   (score = best chunk; rank = position of the expected file among the top 5):")
+    tops, hit1, hit3 = [], 0, 0
     for q, expected in ANSWERABLE:
-        score, src = best(q)
-        good.append(score)
-        print(f"  {score:.2f}  {'OK ' if src == expected else 'MISS'} {src:45s} {q}")
+        res = ranked(q)
+        rk = rank_of(res, expected)
+        hit1 += rk == 1
+        hit3 += rk is not None and rk <= 3
+        tops.append(res[0][0])
+        print(f"  {res[0][0]:.2f}  rank {rk if rk else '-'}  {'OK  ' if rk == 1 else 'MISS'} {expected:44s} {q}")
+    print(f"\n  hit@1 = {hit1}/{len(ANSWERABLE)}   hit@3 = {hit3}/{len(ANSWERABLE)}   (hit@3 matters: the agent receives the top 3 chunks)")
+
     print("\nOUT-OF-SCOPE questions (should score low):")
     bad = []
     for q in UNANSWERABLE:
-        score, src = best(q)
-        bad.append(score)
-        print(f"  {score:.2f}       {src:45s} {q}")
-    lo, hi = min(good), max(bad)
+        res = ranked(q)
+        bad.append(res[0][0])
+        print(f"  {res[0][0]:.2f}  {res[0][1]:44s} {q}")
+
+    print("\nIN-DOMAIN but NOT answered by the docs (scores are moderate; the agent prompt must handle these):")
+    for q, expected in IN_DOMAIN_NOT_ANSWERED:
+        res = ranked(q)
+        rk = rank_of(res, expected) if expected else None
+        note = f"  [{expected} at rank {rk if rk else 'not in top 5'}]" if expected else ""
+        print(f"  {res[0][0]:.2f}  {res[0][1]:44s} {q}{note}")
+
+    lo, hi = min(tops), max(bad)
     print(f"\nLowest answerable score: {lo:.2f} | highest out-of-scope score: {hi:.2f} | current RAG_MIN_SCORE: {config.RAG_MIN_SCORE}")
     if lo > hi:
         print(f"Separable. A threshold around {(lo + hi) / 2:.2f} keeps all answerable questions and blocks out-of-scope ones.")

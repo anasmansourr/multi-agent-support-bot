@@ -79,4 +79,4 @@ EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"   # local and free (d
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 RAG_TOP_K = 3
-RAG_MIN_SCORE = 0.30          # cosine similarity below this = "not relevant"; calibrate with: python -m src.rag.retriever --calibrate
+RAG_MIN_SCORE = 0.20          # calibrated on real scores: off-topic questions <= 0.14, real questions >= 0.21 (python -m src.rag.retriever --calibrate)

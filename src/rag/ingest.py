@@ -16,6 +16,11 @@ from src import config
 
 def get_embeddings():
     """The embedding model. Imported lazily because loading it is slow (and downloads on first use)."""
+    import os
+    import warnings
+    os.environ.setdefault("HF_HUB_DISABLE_SYMLINKS_WARNING", "1")      # Windows: harmless cache notice
+    from langchain_core._api import LangChainDeprecationWarning
+    warnings.filterwarnings("ignore", category=LangChainDeprecationWarning)   # we stay on langchain<1.0 on purpose
     from langchain_community.embeddings import HuggingFaceEmbeddings
     return HuggingFaceEmbeddings(model_name=config.EMBEDDING_MODEL, encode_kwargs={"normalize_embeddings": True})
 

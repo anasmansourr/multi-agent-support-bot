@@ -194,7 +194,7 @@ def log_feature_request(title: str, description: str = "", customer_id: str = "a
 
 # --------------------------------------------------------------- RAG tool
 class DocsInput(BaseModel):
-    query: str = Field(description="What to look up, as a short question or keywords, e.g. 'refund window' or 'webhook retries'.")
+    query: str = Field(description="Keywords about the topic, WITHOUT the product name, e.g. 'refund window', 'webhook retries' or 'Microsoft Teams integration'.")
 
 
 def search_docs(query: str) -> dict:

@@ -48,7 +48,7 @@ def docs_retriever(index_dir):
 # ------------------------------------------------------------------ the knowledge base itself
 def test_knowledge_base_is_small_and_coherent():
     docs = load_documents()
-    assert 10 <= len(docs) <= 30
+    assert 10 <= len(docs) <= 30 and len(docs) == 16
     for d in docs:
         words = len(d.page_content.split())
         assert d.page_content.startswith("# ") and 30 <= words <= 300, (d.metadata["source"], words)
