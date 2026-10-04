@@ -96,7 +96,11 @@ with st.sidebar:
     threshold = st.slider("Confidence threshold", 0.0, 1.0, float(config.CONFIDENCE_THRESHOLD), 0.01,
                           help="Below this, the message goes to the General agent.")
     outage = st.toggle("Simulate Groq outage", help="Forces the Ollama fallback, for the demo.")
-    if outage:
+    ollama_outage = st.toggle("Also simulate Ollama outage", help="With both on, every provider fails: shows the friendly error.")
+    simulated = ({"groq"} if outage else set()) | ({"ollama"} if ollama_outage else set())
+    if outage and ollama_outage:
+        st.warning("Both providers are simulated DOWN: expect the friendly error message.")
+    elif outage:
         st.warning("Groq outage simulation is ON: answers come from Ollama.")
     st.button("Reset conversation", on_click=reset_conversation, use_container_width=True)
     with st.expander("Demo messages"):
@@ -123,7 +127,7 @@ if prompt:
         with st.spinner("Thinking..."):
             try:
                 result = ss.bot.ask(prompt, customer_id=customer, threshold=threshold,
-                                    simulate_outage={"groq"} if outage else ())
+                                    simulate_outage=simulated)
             except Exception:  # noqa: BLE001  - the bot already guards itself; this is the UI's own last resort
                 logger.exception("Unexpected UI error")
                 from src.routing.router import GENERIC_ERROR_MESSAGE, RouterResult, RoutingDecision

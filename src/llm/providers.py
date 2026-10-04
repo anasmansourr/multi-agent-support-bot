@@ -86,7 +86,7 @@ def get_ollama_llm(model=None, temperature=config.LLM_TEMPERATURE):
     """Build the LangChain chat model for a LOCAL Ollama server. Does not call the network."""
     from langchain_ollama import ChatOllama
     return ChatOllama(model=model or get_ollama_model_name(), base_url=get_ollama_base_url(),
-                      temperature=temperature,
+                      temperature=temperature, keep_alive=config.OLLAMA_KEEP_ALIVE,
                       client_kwargs={"timeout": config.OLLAMA_TIMEOUT_SECONDS})
 
 

@@ -46,6 +46,9 @@ class FakeBot:
         self.calls.append({"message": message, "customer_id": customer_id, "threshold": threshold,
                            "simulate_outage": set(simulate_outage)})
         text = message.lower()
+        if {"groq", "ollama"} <= set(simulate_outage):
+            return RouterResult(RoutingDecision("billing", 0.93, "billing", False, "ok", threshold=0.6, known_ratio=1.0), None,
+                                "I'm having trouble reaching the AI service right now. Please try again in a minute.")
         if "boom" in text:
             return RouterResult(RoutingDecision("billing", 0.9, "billing", False, "ok"), None,
                                 "I'm having trouble reaching the AI service right now. Please try again in a minute.")

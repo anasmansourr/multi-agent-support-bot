@@ -81,6 +81,7 @@ def test_ollama_llm_built_from_env_without_network(monkeypatch):
     monkeypatch.setenv("OLLAMA_BASE_URL", "http://example.invalid:1234")
     llm = get_ollama_llm()
     assert llm.model == "tiny:1b" and llm.base_url == "http://example.invalid:1234"
+    assert llm.keep_alive == "30m"
 
 
 def test_ollama_error_classification():

@@ -120,11 +120,13 @@ def live_checks(router, skip_ollama=False):
         and not any(p in t for p in ("there isn't an option", "there is no option", "not possible")),
         f"tools={_tools(r)}", t)
 
-    # 9. low confidence, end to end
+    # 9. low confidence, end to end. The general agent may answer from the docs OR ask a clarifying question - both are
+    #    valid for an unclear message (its prompt allows either) - so we check the routing and that an answer came back.
     r = fresh().ask(LOW_CONFIDENCE_MESSAGE)
-    add("low confidence: routed to the general agent and still answered from the docs",
-        r.agent and r.routing.reason == "low_confidence" and r.routing.selected_agent == "general" and "search_docs" in _tools(r),
-        f"{r.routing.predicted_intent} ({r.routing.confidence:.3f}) -> {r.routing.selected_agent}", _text(r))
+    how = "from the docs" if "search_docs" in _tools(r) else "asked a clarifying question / answered directly"
+    add("low confidence: routed to the general agent, which answered (docs or clarifying question)",
+        r.agent and r.routing.reason == "low_confidence" and r.routing.selected_agent == "general" and bool(_text(r)),
+        f"{r.routing.predicted_intent} ({r.routing.confidence:.3f}) -> {r.routing.selected_agent}; general agent {how}", _text(r))
 
     # 10. unknown words
     r = fresh().ask("asdf qwerty")

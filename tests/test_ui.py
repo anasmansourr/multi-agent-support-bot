@@ -85,6 +85,23 @@ def test_outage_toggle_forces_the_fallback_and_shows_it(app):
     assert "ollama (fallback)" in app.chat_message[1].caption[0].value
 
 
+def test_both_outage_toggles_show_the_friendly_error(app):
+    app.sidebar.toggle[0].set_value(True).run()
+    app.sidebar.toggle[1].set_value(True).run()
+    assert any("Both providers are simulated DOWN" in w.value for w in app.sidebar.warning)
+    send(app, "It says I owe 500")
+    assert app.session_state["bot"].calls[-1]["simulate_outage"] == {"groq", "ollama"}
+    assert "try again" in app.chat_message[1].markdown[0].value.lower()
+    assert "Errors **1**" in sidebar_text(app)
+
+
+def test_ollama_toggle_alone_changes_nothing_visible(app):
+    app.sidebar.toggle[1].set_value(True).run()
+    send(app, "It says I owe 500")
+    assert app.session_state["bot"].calls[-1]["simulate_outage"] == {"ollama"}
+    assert "You owe $500.00" in app.chat_message[1].markdown[0].value
+
+
 def test_threshold_and_customer_are_passed_to_the_bot(app):
     app.sidebar.slider[0].set_value(0.8).run()
     app.sidebar.selectbox[0].set_value("cust_paid").run()

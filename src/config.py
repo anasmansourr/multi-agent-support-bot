@@ -93,3 +93,4 @@ FOLLOWUP_STICKY = True
 # cannot be trusted (it was 0.87 for the gibberish "asdf qwerty") -> treat as unknown input -> general agent.
 MIN_KNOWN_WORD_RATIO = 0.34
 MAX_INPUT_CHARS = 1000
+OLLAMA_KEEP_ALIVE = "30m"     # keep the local model loaded between requests (avoids a ~40 s reload mid-demo)
