@@ -80,3 +80,22 @@ def test_tool_descriptions_exist_for_the_llm():
     for tool_list in TOOLS_BY_AGENT.values():
         for t in tool_list:
             assert len(t.description) > 40 and t.args_schema is not None
+
+
+def test_logging_a_feature_that_is_already_on_the_roadmap_is_refused_in_code(tmp_path, monkeypatch):
+    monkeypatch.setattr(config, "FEATURE_REQUESTS_PATH", tmp_path / "fr.jsonl")
+    for title in ["Dark mode", "Please add dark mode to the mobile app", "SAML single sign-on", "Kanban board"]:
+        r = log_feature_request_tool.invoke({"title": title})
+        assert r["logged"] is False and r["reason"] == "already_on_roadmap", title
+    assert not (tmp_path / "fr.jsonl").exists()                           # nothing was written
+
+
+def test_features_under_review_or_unplanned_can_still_be_logged(tmp_path, monkeypatch):
+    monkeypatch.setattr(config, "FEATURE_REQUESTS_PATH", tmp_path / "fr.jsonl")
+    for title in ["Excel export", "Offline mode", "Linux app"]:
+        assert log_feature_request_tool.invoke({"title": title})["logged"] is True, title
+
+
+def test_roadmap_ignores_filler_words():
+    assert check_roadmap_tool.invoke({"keyword": "linux app"})["found"] is False          # 'app' is not evidence
+    assert "specific keyword" in check_roadmap_tool.invoke({"keyword": "the app"})

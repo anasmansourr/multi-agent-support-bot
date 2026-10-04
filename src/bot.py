@@ -49,7 +49,7 @@ def main():
     print("FlowDesk support chat (demo). Commands: /reset  /memory  /outage (toggle Groq outage)  /quit\n")
     while True:
         try:
-            text = input("You: ").strip()
+            text = input(f"You{' [Groq outage ON]' if outage else ''}: ").strip()
         except (EOFError, KeyboardInterrupt):
             break
         if not text:

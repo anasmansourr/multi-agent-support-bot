@@ -155,17 +155,26 @@ class RoadmapInput(BaseModel):
     keyword: str = Field(description="A word or phrase for the feature, e.g. 'dark mode' or 'excel'.")
 
 
+_ROADMAP_STOPWORDS = {"a", "an", "the", "for", "to", "of", "add", "please", "feature", "request", "app", "support", "new", "in"}
+
+
+def _roadmap_matches(text):
+    """Best-matching roadmap items for free text. Score = how many meaningful words hit the feature name or tags;
+    only the best-scoring items are kept, so "dark mode" finds "Dark mode" and not "Offline mode"."""
+    words = [w for w in str(text).lower().replace("-", " ").split() if w and w not in _ROADMAP_STOPWORDS]
+    if not words:
+        return []
+    scored = [(sum(w in item["feature"].lower() or w in item["tags"] for w in words), item) for item in MOCK_ROADMAP]
+    best = max((score for score, _ in scored), default=0)
+    return [{k: v for k, v in item.items() if k != "tags"} for score, item in scored if score == best and best > 0]
+
+
 def check_roadmap(keyword: str) -> dict:
     """Search the product roadmap for a feature. Returns its status (shipped, in_progress, planned,
     under_review, not_planned), ETA and votes. Use this BEFORE logging a new feature request."""
-    words = [w for w in str(keyword).lower().replace("-", " ").split() if w]
-    if not words:
-        raise ToolException("Please provide a keyword for the feature.")
-    # Score = how many of the query words hit the feature name or its tags; keep only the best matches,
-    # so "dark mode" finds "Dark mode" and not "Offline mode" (which shares only the word "mode").
-    scored = [(sum(w in item["feature"].lower() or w in item["tags"] for w in words), item) for item in MOCK_ROADMAP]
-    best = max((score for score, _ in scored), default=0)
-    hits = [{k: v for k, v in item.items() if k != "tags"} for score, item in scored if score == best and best > 0]
+    if not [w for w in str(keyword).lower().split() if w not in _ROADMAP_STOPWORDS]:
+        raise ToolException("Please provide a more specific keyword for the feature.")
+    hits = _roadmap_matches(keyword)
     return {"found": True, "matches": hits} if hits else \
         {"found": False, "message": f"Nothing on the roadmap matches '{keyword}'."}
 
@@ -177,11 +186,15 @@ class FeatureRequestInput(BaseModel):
 
 
 def log_feature_request(title: str, description: str = "", customer_id: str = "anonymous") -> dict:
-    """Record a NEW feature request from a customer and return its ticket id. Only call this after the
-    customer confirmed they want it logged and check_roadmap showed it is not already planned or shipped."""
+    """Record a NEW feature request from a customer and return its ticket id. Call this only after check_roadmap
+    showed the feature is not already shipped, planned or in progress (the tool also refuses duplicates)."""
     title = str(title).strip()
     if not title:
         raise ToolException("A feature request needs a title.")
+    existing = [m for m in _roadmap_matches(title) if m["status"] in ("shipped", "planned", "in_progress")]
+    if existing:      # enforced in code, not left to the LLM
+        return {"logged": False, "reason": "already_on_roadmap", "matches": existing,
+                "message": "This feature is already on the roadmap, so no new request was logged. Tell the customer its status."}
     path = config.FEATURE_REQUESTS_PATH
     path.parent.mkdir(parents=True, exist_ok=True)
     existing = sum(1 for _ in open(path, encoding="utf-8")) if path.exists() else 0

@@ -134,3 +134,12 @@ def test_prompts_forbid_inventing_details_and_claiming_unbacked_actions():
     technical = build_system_prompt("technical", ["check_service_status"])
     assert "ONLY come from documentation" in technical
     assert "forwarded or submitted" in build_system_prompt("billing", [])
+
+
+def test_prompts_keep_conversations_self_contained_and_hide_internals():
+    from src.agents.prompts import COMMON_RULES
+    assert "Never mention tool names" in COMMON_RULES
+    assert "Do not call tools yet" in COMMON_RULES
+    assert "Finish the job in one reply" in COMMON_RULES
+    feature = build_system_prompt("feature_request", ["check_roadmap", "log_feature_request"])
+    assert "in the same reply" in feature and "Do NOT log a new request" in feature
