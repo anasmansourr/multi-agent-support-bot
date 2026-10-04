@@ -19,6 +19,7 @@ faiss-cpu
 # App
 streamlit
 python-dotenv
+markdown                # builds the write-up report (docs/report.html)
 
 # Tests
 pytest
