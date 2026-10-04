@@ -56,3 +56,11 @@ def test_unknown_words_and_very_long_text_are_handled(checkpoint):
 def test_missing_checkpoint_gives_helpful_error(tmp_path):
     with pytest.raises(FileNotFoundError, match="python -m src.classifier.train"):
         IntentPredictor(tmp_path / "nope.pt")
+
+
+def test_known_ratio_separates_real_words_from_gibberish(checkpoint):
+    p = IntentPredictor(checkpoint)
+    assert p.predict("asdf qwerty zxcv")["known_ratio"] == 0.0
+    assert p.predict("refund please")["known_ratio"] > 0.5
+    assert 0.0 <= p.predict("refund asdf")["known_ratio"] <= 1.0
+    assert p.predict("")["known_ratio"] == 0.0

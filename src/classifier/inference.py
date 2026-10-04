@@ -70,16 +70,19 @@ class IntentPredictor:
                 "Train it first:  python -m src.classifier.train") from exc
 
     def predict(self, text):
-        """text -> {"intent", "confidence", "scores"}. Never raises on odd input:
+        """text -> {"intent", "confidence", "known_ratio", "scores"}. Never raises on odd input:
         empty / non-string text gives confidence 0.0 so the router's low-confidence rule
         sends it to the general agent."""
         names = [self._clf.label_map[i] for i in range(len(self._clf.label_map))]
-        if not isinstance(text, str) or not tokenize(text):
-            return {"intent": "general", "confidence": 0.0, "scores": {n: 0.0 for n in names}}
+        tokens = tokenize(text) if isinstance(text, str) else []
+        if not tokens:
+            return {"intent": "general", "confidence": 0.0, "known_ratio": 0.0, "scores": {n: 0.0 for n in names}}
         probs = predict_probs(self._clf, [text])[0]
         best = int(probs.argmax())
+        known = sum(t in self._clf.vocab.stoi for t in tokens)      # words the classifier has actually seen
         return {"intent": names[best],
                 "confidence": round(float(probs[best]), 4),
+                "known_ratio": round(known / len(tokens), 3),
                 "scores": {n: round(float(p), 4) for n, p in zip(names, probs)}}
 
 

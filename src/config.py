@@ -87,3 +87,9 @@ MEMORY_MAX_CHARS = 1500       # per stored message (saves tokens on rate-limited
 # True: a LOW-confidence message in the middle of a conversation stays with the current agent (so "yes please"
 # keeps its flow). False: strict rule everywhere - low confidence always goes to the general agent.
 FOLLOWUP_STICKY = True
+
+# ---- Robustness (Phase 15) -------------------------------------------------------
+# If fewer than this share of a message's words are in the classifier's vocabulary, the classifier's confidence
+# cannot be trusted (it was 0.87 for the gibberish "asdf qwerty") -> treat as unknown input -> general agent.
+MIN_KNOWN_WORD_RATIO = 0.34
+MAX_INPUT_CHARS = 1000

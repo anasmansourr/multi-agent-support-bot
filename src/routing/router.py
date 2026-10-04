@@ -12,6 +12,7 @@ Probe routing without calling any LLM (free, instant):
 Full pipeline:
     python -m src.routing.router "it says i owe 500"
 """
+import logging
 import math
 from dataclasses import dataclass, field
 from functools import partial
@@ -23,6 +24,9 @@ from src.agents.agents import AgentResult, run_agent
 from src.llm.providers import AllProvidersFailed
 
 FALLBACK_AGENT = "general"
+GENERIC_ERROR_MESSAGE = "Sorry, something went wrong on my side. Please try again."
+EMPTY_INPUT_MESSAGE = "Please type a message."
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -34,6 +38,7 @@ class RoutingDecision:
     reason: str                    # ok | low_confidence | classifier_error | invalid_output
     scores: dict = field(default_factory=dict)
     threshold: float = config.CONFIDENCE_THRESHOLD
+    known_ratio: float | None = None   # share of the message's words the classifier knows (None = not reported)
 
 
 @dataclass
@@ -57,18 +62,24 @@ def decide(message, predictor, threshold=None, active_agent=None, sticky=None):
         out = predictor.predict(message)
         intent, confidence = out["intent"], float(out["confidence"])
         scores = dict(out.get("scores", {}))
+        known = out.get("known_ratio")
+        known = None if known is None else float(known)
     except Exception:  # noqa: BLE001
         return RoutingDecision("unknown", 0.0, FALLBACK_AGENT, True, "classifier_error", threshold=threshold)
 
     if intent not in config.INTENTS or math.isnan(confidence) or not 0.0 <= confidence <= 1.0:
-        return RoutingDecision(str(intent), 0.0, FALLBACK_AGENT, True, "invalid_output", scores, threshold)
+        return RoutingDecision(str(intent), 0.0, FALLBACK_AGENT, True, "invalid_output", scores, threshold, known)
+    if known is not None and known < config.MIN_KNOWN_WORD_RATIO:
+        # The softmax can be very confident about words the model has never seen; do not trust it.
+        return RoutingDecision(intent, confidence, FALLBACK_AGENT, intent != FALLBACK_AGENT, "unknown_words",
+                               scores, threshold, known)
     if confidence < threshold:
         if sticky and active_agent in config.INTENTS and active_agent != FALLBACK_AGENT:
             return RoutingDecision(intent, confidence, active_agent, intent != active_agent,
-                                   "low_confidence_kept_agent", scores, threshold)
+                                   "low_confidence_kept_agent", scores, threshold, known)
         return RoutingDecision(intent, confidence, FALLBACK_AGENT, intent != FALLBACK_AGENT,
-                               "low_confidence", scores, threshold)
-    return RoutingDecision(intent, confidence, intent, False, "ok", scores, threshold)
+                               "low_confidence", scores, threshold, known)
+    return RoutingDecision(intent, confidence, intent, False, "ok", scores, threshold, known)
 
 
 # ------------------------------------------------------------------ LangChain chain
@@ -105,6 +116,10 @@ class Router:
 
     def handle(self, message, chat_history=None, customer_id=config.DEFAULT_CUSTOMER_ID, threshold=None,
                providers=None, simulate_outage=(), active_agent=None):
+        message = str(message or "").strip()
+        if not message:
+            return RouterResult(RoutingDecision("unknown", 0.0, FALLBACK_AGENT, False, "empty_input"), None, EMPTY_INPUT_MESSAGE)
+        message = message[: config.MAX_INPUT_CHARS]
         routing = decide(message, self.predictor, threshold, active_agent)    # the classifier runs exactly once per message
         state = {"input": message, "chat_history": list(chat_history or []), "customer_id": customer_id,
                  "routing": routing, "providers": providers, "simulate_outage": simulate_outage}
@@ -113,26 +128,51 @@ class Router:
             return RouterResult(out["routing"], out["agent"])
         except AllProvidersFailed as exc:
             return RouterResult(routing, None, exc.user_message, exc.attempts)
+        except Exception:  # noqa: BLE001  - last line of defence: the UI must never crash
+            logger.exception("Unexpected error while handling a message")      # details go to the log, not the user
+            return RouterResult(routing, None, GENERIC_ERROR_MESSAGE)
+
+
+def check_guard(router):
+    """How many validation sentences does the unknown-words guard flag, and did the classifier get them right?"""
+    import pandas as pd
+    df = pd.read_csv(config.PROCESSED_DIR / "val.csv")
+    flagged, flagged_right = [], 0
+    for text, label in zip(df["text"], df["label"]):
+        out = router.predictor.predict(text)
+        if out.get("known_ratio", 1.0) < config.MIN_KNOWN_WORD_RATIO:
+            flagged.append((text, label, out["intent"], out["confidence"], out["known_ratio"]))
+            flagged_right += out["intent"] == label
+    print(f"Validation sentences: {len(df)} | flagged by the guard (known words < {config.MIN_KNOWN_WORD_RATIO}): {len(flagged)}")
+    print(f"Of the flagged ones, the classifier was RIGHT for {flagged_right} (the guard sends these to the general agent).")
+    for text, label, pred, conf, known in flagged[:15]:
+        print(f"  known={known:.2f} true={label:15s} predicted={pred:15s} ({conf:.2f})  {text[:70]!r}")
 
 
 def main():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("messages", nargs="+")
+    parser.add_argument("messages", nargs="*")
     parser.add_argument("--route-only", action="store_true", help="show routing decisions only (no LLM call)")
+    parser.add_argument("--check-guard", action="store_true",
+                        help="measure the unknown-words guard on the VALIDATION set (never test sets)")
     parser.add_argument("--simulate-groq-outage", action="store_true")
     args = parser.parse_args()
     router = Router()
 
+    if args.check_guard:
+        return check_guard(router)
+    if not args.messages:
+        parser.error("give at least one message (or --check-guard)")
     for message in args.messages:
         if args.route_only:
             d = router.route_only(message)
-            print(f"{message!r}\n   predicted={d.predicted_intent} ({d.confidence:.2f}) -> agent={d.selected_agent}"
-                  f"  [{d.reason}]" + ("  FALLBACK" if d.fallback_applied else ""))
+            print(f"{message!r}\n   predicted={d.predicted_intent} ({d.confidence:.3f}) known_words={d.known_ratio} "
+                  f"-> agent={d.selected_agent}  [{d.reason}]" + ("  FALLBACK" if d.fallback_applied else ""))
             continue
         r = router.handle(message, simulate_outage={"groq"} if args.simulate_groq_outage else ())
         d = r.routing
-        print(f"\nMESSAGE: {message}\nClassifier: {d.predicted_intent} ({d.confidence:.2f}) -> agent: {d.selected_agent}"
+        print(f"\nMESSAGE: {message}\nClassifier: {d.predicted_intent} ({d.confidence:.3f}) -> agent: {d.selected_agent}"
               f" [{d.reason}, threshold {d.threshold:.2f}]")
         if r.agent is None:
             print(f"ERROR (user-safe): {r.error}")

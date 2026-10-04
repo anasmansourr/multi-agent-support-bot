@@ -31,8 +31,9 @@ class SupportBot:
 def _show(result):
     d = result.routing
     note = {"ok": "", "low_confidence": "  [LOW CONFIDENCE -> general]",
-            "low_confidence_kept_agent": "  [LOW CONFIDENCE -> kept current agent]"}.get(d.reason, f"  [{d.reason}]")
-    print(f"  classifier: {d.predicted_intent} ({d.confidence:.2f}) -> agent: {d.selected_agent}{note}")
+            "low_confidence_kept_agent": "  [LOW CONFIDENCE -> kept current agent]",
+            "unknown_words": "  [UNKNOWN WORDS -> general]"}.get(d.reason, f"  [{d.reason}]")
+    print(f"  classifier: {d.predicted_intent} ({d.confidence:.3f}) -> agent: {d.selected_agent}{note}")
     if result.agent is None:
         print(f"  ERROR: {result.error}")
         return

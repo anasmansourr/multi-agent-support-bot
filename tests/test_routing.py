@@ -117,3 +117,55 @@ def test_all_providers_failing_returns_error_but_keeps_the_routing_info():
                                                       simulate_outage={"groq"})
     assert r.agent is None and "try again" in r.error.lower()
     assert r.routing.selected_agent == "billing"          # the sidebar can still show the routing
+
+
+# ------------------------------------------------------------------ Phase 15: robustness
+def test_mostly_unknown_words_are_not_trusted_even_when_confidence_is_high():
+    d = decide("asdf qwerty", FakePredictor(raw={"intent": "billing", "confidence": 0.95, "known_ratio": 0.0}))
+    assert d.selected_agent == "general" and d.reason == "unknown_words" and d.fallback_applied
+    assert d.confidence == 0.95 and d.known_ratio == 0.0            # the sidebar can still show what the model said
+
+
+def test_unknown_words_guard_is_never_sticky():
+    d = decide("asdf", FakePredictor(raw={"intent": "billing", "confidence": 0.95, "known_ratio": 0.0}),
+               active_agent="billing", sticky=True)
+    assert d.selected_agent == "general"
+
+
+def test_guard_boundary_and_missing_value(monkeypatch):
+    ok = decide("x", FakePredictor(raw={"intent": "technical", "confidence": 0.9, "known_ratio": config.MIN_KNOWN_WORD_RATIO}))
+    assert ok.selected_agent == "technical"                                   # exactly at the limit is allowed
+    none = decide("x", FakePredictor(raw={"intent": "technical", "confidence": 0.9}))
+    assert none.selected_agent == "technical" and none.known_ratio is None    # old predictors without the field still work
+
+
+def test_empty_and_whitespace_input_never_reaches_the_classifier_or_llm():
+    pred = FakePredictor("billing", 0.95)
+    for blank in ["", "   ", None]:
+        r = Router(pred).handle(blank)
+        assert r.agent is None and r.error == "Please type a message." and r.routing.reason == "empty_input"
+    assert pred.calls == []
+
+
+def test_very_long_input_is_truncated_before_classification():
+    pred = FakePredictor("general", 0.9)
+    model = ScriptedChatModel(script=[AIMessage(content="ok")])
+    Router(pred).handle("a" * 5000, providers=[provider(model)])
+    assert len(pred.calls[0]) == config.MAX_INPUT_CHARS
+
+
+def test_unexpected_bug_returns_a_friendly_error_not_a_crash():
+    import src.routing.router as router_mod
+
+    def explode(*a, **k):
+        raise ZeroDivisionError("secret internal detail")
+
+    r = Router(FakePredictor("billing", 0.95))
+    original = router_mod.run_agent
+    router_mod.run_agent = explode
+    try:
+        result = r.handle("hi")
+    finally:
+        router_mod.run_agent = original
+    assert result.agent is None and result.error == router_mod.GENERIC_ERROR_MESSAGE
+    assert "secret" not in result.error and "ZeroDivisionError" not in result.error
