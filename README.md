@@ -19,7 +19,7 @@ User message -> Bi-LSTM classifier -> intent + confidence -> LangChain router (R
 | Test set (407 sentences) | **89.9%** | **0.898** |
 | Hard test set (60 hand-written, partly ambiguous) | 78.3% | 0.783 |
 
-181 automated tests pass; 26/26 real-stack integration checks pass. Details, confusion matrices and analysis: `docs/writeup.md`.
+187 automated tests pass; 26/26 real-stack integration checks pass. Details, confusion matrices and analysis: `docs/writeup.md`.
 
 ## Quick start (Windows PowerShell)
 ```powershell
